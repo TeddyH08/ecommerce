@@ -9,6 +9,7 @@
     </head>
 
     <body>
-        
+        <?php include "assets/includes/navbar.php"; ?>
+        <?php include "assets/includes/footer.php"; ?>
     </body>
 </html>
