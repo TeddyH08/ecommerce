@@ -2,9 +2,9 @@
     <div class="top">
         <div class="reseaux">
             <ul>
-                <li class="fb"><i class="fa-brands fa-facebook-square"></i></li>
-                <li class="tw"><i class="fa-brands fa-twitter-square"></i></li>
-                <li class="insta"><i class="fa-brands fa-instagram-square"></i></li>
+                <a href=""><li class="fb"><i class="fa-brands fa-facebook-square"></i></li></a>
+                <a href=""><li class="tw"><i class="fa-brands fa-twitter-square"></i></li></a>
+                <a href=""><li class="insta"><i class="fa-brands fa-instagram-square"></i></li></a>
             </ul>
         </div>
 
@@ -13,8 +13,8 @@
 
         <div class="user">
             <ul>
-                <li class="users">S'inscrire</li>
-                <li class="users">S'identifier</li>
+                <a href=""><li class="users">S'inscrire</li></a>
+                <a href=""><li class="users">S'identifier</li></a>
             </ul>
         </div>
     </div>
