@@ -23,6 +23,8 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: stretch;
+    position: sticky;
+    top: 0;
 }
 
 .top {
@@ -133,7 +135,6 @@ ul {
     align-items: center;
     text-decoration: none;
     padding: 15px 10px;
-    margin: 0 15px;
     cursor: pointer;
     border-bottom: 3px white solid;
     transition: 500ms ease;
@@ -143,6 +144,37 @@ ul {
     border-bottom: 3px black solid;
     background-color: rgb(240, 240, 240);
 }
+
+.dd-mnu{
+    background-color: #ffffff;
+    display: none;
+    position: fixed;
+    top: 95px;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
+  .dd-mnu ul{
+    position: relative;
+  }
+  .dropdown-menu{
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .dropdown-menu li{
+    display: block;
+    text-align: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 15px 10px;
+    margin: 0 15px;
+    cursor: pointer;
+  }
+  .dropdown-menu li a{
+    padding-left: 15px;
+  }
 
 .search {
     display: flex;

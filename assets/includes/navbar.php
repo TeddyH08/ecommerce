@@ -18,36 +18,124 @@
             </ul>
         </div>
     </div>
-</header>
-<nav>
-    <div class="logo">
-            <a href="index.php">Logo</a>
-    </div>
 
-    <div class="menu">
-        <ul>
-            <li class="categorie">Nouveautés</li>
-            <li class="categorie">Hommes</li>
-            <li class="categorie">Femmes</li>
-            <li class="categorie">Enfants</li>
-            <li class="categorie">Sport</li>
-        </ul>
-    </div>
-
-    
-
-    <div class="account">
-        <div class="search">
-            <input type="text" class="search-bar">
-            <a href="" class="search-button"><i class="fa-solid fa-magnifying-glass"></i></a>
+<nav class="navbar">
+        <div class="logo">
+                <a href="index.php">Logo</a>
         </div>
-        <a href="" class="fav"><i class="fa-solid fa-heart"></i></a>
-        <a href="" class="shop"><i class="fa-solid fa-bag-shopping"></i></a>
-        <a href="" class="acc"><i class="fa-solid fa-user"></i></a>
-    </div>
+
+        <div class="menu">
+            <ul>
+                <li class="categorie dropdown">
+                    <a href="#">Nouveautés</a>
+
+                    <div class="dd-mnu">
+                        <ul class="dropdown-menu">
+                            <li class="">
+                                <a href="nouveaux/hauts">Hauts</a>
+                            </li>
+                            <li class="">
+                                <a href="nouveaux/pantalons">Pantalons</a>
+                            </li>
+                            <li class="">
+                                <a href="nouveaux/chaussures">Chaussures</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="categorie dropdown">
+                    <a href="#">Hommes</a>
+
+                    <div class="dd-mnu">
+                        <ul class="dropdown-menu">
+                            <li class="">
+                                <a href="nouveaux/hauts">Hauts</a>
+                            </li>
+                            <li class="">
+                                <a href="nouveaux/pantalons">Pantalons</a>
+                            </li>
+                            <li class="">
+                                <a href="nouveaux/chaussures">Chaussures</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="categorie dropdown">
+                    <a href="#">Femmes</a>
+
+                    <div class="dd-mnu">
+                        <ul class="dropdown-menu">
+                            <li class="">
+                                <a href="nouveaux/hauts">Hauts</a>
+                            </li>
+                            <li class="">
+                                <a href="nouveaux/pantalons">Pantalons</a>
+                            </li>
+                            <li class="">
+                                <a href="nouveaux/chaussures">Chaussures</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="categorie dropdown">
+                    <a href="#">Enfants</a>
+
+                    <div class="dd-mnu">
+                        <ul class="dropdown-menu">
+                            <li class="">
+                                <a href="nouveaux/hauts">Hauts</a>
+                            </li>
+                            <li class="">
+                                <a href="nouveaux/pantalons">Pantalons</a>
+                            </li>
+                            <li class="">
+                                <a href="nouveaux/chaussures">Chaussures</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="categorie dropdown">
+                    <a href="#">Sports</a>
+
+                    <div class="dd-mnu">
+                        <ul class="dropdown-menu">
+                            <li class="">
+                                <a href="nouveaux/hauts">Football</a>
+                            </li>
+                            <li class="">
+                                <a href="nouveaux/pantalons">Basketball</a>
+                            </li>
+                            <li class="">
+                                <a href="nouveaux/chaussures">Handball</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="account">
+            <div class="search">
+                <input type="text" class="search-bar">
+                <a href="" class="search-button"><i class="fa-solid fa-magnifying-glass"></i></a>
+            </div>
+            <a href="" class="fav"><i class="fa-solid fa-heart"></i></a>
+            <a href="" class="shop"><i class="fa-solid fa-bag-shopping"></i></a>
+            <a href="" class="acc"><i class="fa-solid fa-user"></i></a>
+        </div>
 </nav>
+</header>
 
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 
+<script src="assets/js/script.js"></script>
+
+<div class="container">
 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia animi consectetur eius repellat quo ipsum laudantium neque dicta maiores quod vitae, aliquid blanditiis, officiis aut accusantium. Deserunt debitis similique harum.
 Recusandae quam quos vero illo earum aspernatur aperiam, ex ad reprehenderit excepturi? Esse fugiat quaerat similique iure beatae libero omnis culpa corrupti tenetur soluta, atque commodi tempore? Molestiae, eligendi perferendis!
 Ratione sint explicabo, ut deleniti incidunt itaque asperiores provident? Inventore sequi, ipsum minima tenetur facilis rerum laboriosam veniam, esse aut corporis ducimus cumque quis quia iure dolor molestias a fugiat!
@@ -148,3 +236,4 @@ Architecto et obcaecati libero similique tempora culpa a dolore, fuga, numquam e
 A officiis voluptate, ullam temporibus debitis in quibusdam, assumenda possimus odio soluta dolorum dolore labore? Nostrum aliquid ex tempora. Cumque minima blanditiis quaerat illo saepe, debitis voluptatibus recusandae temporibus explicabo.
 Quidem tenetur quaerat illum possimus quibusdam eligendi! Praesentium quaerat laudantium qui culpa accusantium totam vel saepe atque. Porro sed sint, labore perferendis delectus deleniti placeat, ipsam nobis quas quo iure?
 Rem, tempore incidunt. Molestias quaerat nobis porro saepe iure distinctio quos excepturi neque vel quam recusandae cum dolore facere, aut quisquam exercitationem assumenda illo nesciunt veritatis repellendus consequuntur doloribus quibusdam?</p>
+</div>
