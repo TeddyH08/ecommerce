@@ -80,7 +80,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 15%;
+    width: 25%;
 }
 
 .user {
@@ -130,6 +130,7 @@ ul {
 .categorie {
     display: block;
     text-align: center;
+    align-items: center;
     text-decoration: none;
     padding: 15px 10px;
     margin: 0 15px;
@@ -143,11 +144,26 @@ ul {
     background-color: rgb(240, 240, 240);
 }
 
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-bar {
+    height: 20px;
+    width: 70%;
+}
+
+.search-button {
+    margin: 0 20px 0 5px;
+}
+
 .account {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 15%;
+    width: 25%;
 }
 
 .fav {

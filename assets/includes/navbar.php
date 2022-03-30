@@ -34,7 +34,13 @@
         </ul>
     </div>
 
+    
+
     <div class="account">
+        <div class="search">
+            <input type="text" class="search-bar">
+            <a href="" class="search-button"><i class="fa-solid fa-magnifying-glass"></i></a>
+        </div>
         <a href="" class="fav"><i class="fa-solid fa-heart"></i></a>
         <a href="" class="shop"><i class="fa-solid fa-bag-shopping"></i></a>
         <a href="" class="acc"><i class="fa-solid fa-user"></i></a>
