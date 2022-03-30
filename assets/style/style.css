@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'Oswald';
+    src: url(../font/Oswald-Regular.ttf);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -8,12 +13,64 @@ body {
     padding: 0;
 }
 
-nav {
+a {
+    text-decoration: none;
+    color: black;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.top {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    font-family: 'Oswald';
+    list-style-type: none;
+    background-color: white;
+}
+
+.fb {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 500ms ease;
+    margin: 0 10px;
+    font-size: 150%;
+    color: blue;
+}
+
+.tw {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 500ms ease;
+    margin: 0 10px;
+    font-size: 150%;
+    color: deepskyblue;
+}
+
+.insta {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 500ms ease;
+    margin: 0 10px;
+    font-size: 150%;
+    color: darkorange;
+}
+
+.blank {
+    width: 15%;
 }
 
 .logo {
@@ -23,6 +80,37 @@ nav {
     width: 15%;
 }
 
+.user {
+    width: 15%;
+}
+
+.users {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 500ms ease;
+    margin: 0 10px;
+}
+
+.users:hover {
+    text-decoration: underline;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-family: 'Oswald';
+    list-style-type: none;
+    background-color: white;
+    font-size: 110%;
+    position: sticky;
+    top: 0;
+}
+
 .menu {
     width: 50%;
 }
@@ -30,13 +118,63 @@ nav {
 ul {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    text-decoration: none;
+}
+
+.categorie {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    padding: 15px 10px;
+    margin: 0 15px;
+    cursor: pointer;
+    border-bottom: 3px white solid;
+    transition: 500ms ease;
+}
+
+.categorie:hover {
+    border-bottom: 3px black solid;
+    background-color: rgb(240, 240, 240);
 }
 
 .account {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     width: 15%;
+}
+
+.fav {
+    border-radius: 50%;
+    padding: 3px 7px;
+    margin: 0 5px;
+    transition: 500ms ease;
+}
+
+.fav:hover {
+    background-color: lightgray;
+}
+
+.shop {
+    border-radius: 50%;
+    padding: 3px 7px;
+    margin: 0 5px;
+    transition: 500ms ease;
+}
+
+.shop:hover {
+    background-color: lightgray;
+}
+
+.acc {
+    border-radius: 50%;
+    padding: 3px 7px;
+    margin: 0 5px;
+    transition: 500ms ease;
+}
+
+.acc:hover {
+    background-color: lightgray;
 }
