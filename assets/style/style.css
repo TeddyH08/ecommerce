@@ -85,6 +85,10 @@ header {
     width: 25%;
 }
 
+.logo a  {
+    width: 10%;
+}
+
 .user {
     width: 15%;
 }
@@ -100,6 +104,10 @@ header {
 
 .users:hover {
     text-decoration: underline;
+}
+
+.log {
+    width: 100%;
 }
 
 nav {
@@ -138,6 +146,7 @@ ul {
     cursor: pointer;
     border-bottom: 3px white solid;
     transition: 500ms ease;
+    font-size: 110%;
 }
 
 .categorie:hover {
@@ -145,11 +154,33 @@ ul {
     background-color: rgb(240, 240, 240);
 }
 
+.sous-cat {
+    font-size: 90%;
+}
+
+.sous-sous-cat {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 80%;
+    padding: 0;
+    margin: 0;
+}
+
+.sous-sous-cat_redirect {
+    padding: 0;
+}
+
+.hov:hover {
+    text-decoration: underline;
+}
+
 .dd-mnu{
     background-color: #ffffff;
     display: none;
     position: fixed;
-    top: 5.9rem;
+    top: 6.1rem;
     left: 0;
     right: 0;
     z-index: 1;

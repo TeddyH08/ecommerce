@@ -21,7 +21,7 @@
 
 <nav class="navbar">
         <div class="logo">
-                <a href="index.php">Logo</a>
+                <a href="index.php"><img src="assets/img/logo.jpg" class="log"></a>
         </div>
 
         <div class="menu">
@@ -31,14 +31,29 @@
 
                     <div class="dd-mnu">
                         <ul class="dropdown-menu">
-                            <li class="">
-                                <a href="nouveaux/hauts">Hauts</a>
+                            <li class="sous-cat">
+                                <a href="nouveaux/hauts" class="hov">Hauts</a>
+                                <ul class="sous-sous-cat">
+                                    <li class="sous-sous-cat_redirect hov"><a href="">T-shirts</a></li>
+                                    <li class="sous-sous-cat_redirect hov"><a href="">Pulls</a></li>
+                                    <li class="sous-sous-cat_redirect hov"><a href="">Veste</a></li>
+                                </ul>
                             </li>
-                            <li class="">
-                                <a href="nouveaux/pantalons">Pantalons</a>
+                            <li class="sous-cat">
+                                <a href="nouveaux/pantalons" class="hov">Pantalons</a>
+                                <ul class="sous-sous-cat">
+                                    <li class="sous-sous-cat_redirect hov"><a href="">Joggings</a></li>
+                                    <li class="sous-sous-cat_redirect hov"><a href="">Jeans</a></li>
+                                    <li class="sous-sous-cat_redirect hov"><a href="">Cargo</a></li>
+                                </ul>
                             </li>
-                            <li class="">
-                                <a href="nouveaux/chaussures">Chaussures</a>
+                            <li class="sous-cat">
+                                <a href="nouveaux/chaussures" class="hov">Chaussures</a>
+                                <ul class="sous-sous-cat">
+                                    <li class="sous-sous-cat_redirect hov"><a href="">Baskets</a></li>
+                                    <li class="sous-sous-cat_redirect hov"><a href="">Boots</a></li>
+                                    <li class="sous-sous-cat_redirect hov"><a href="">Villes</a></li>
+                                </ul>
                             </li>
                         </ul>
                     </div>
@@ -49,14 +64,29 @@
 
                     <div class="dd-mnu">
                         <ul class="dropdown-menu">
-                            <li class="">
-                                <a href="nouveaux/hauts">Hauts</a>
+                            <li class="sous-cat">
+                                <a href="nouveaux/hauts" class="hov">Hauts</a>
+                                <ul class="sous-sous-cat">
+                                    <li class="sous-sous-cat_redirect hov"><a href="">T-shirts</a></li>
+                                    <li class="sous-sous-cat_redirect hov"><a href="">Pulls</a></li>
+                                    <li class="sous-sous-cat_redirect hov"><a href="">Veste</a></li>
+                                </ul>
                             </li>
-                            <li class="">
-                                <a href="nouveaux/pantalons">Pantalons</a>
+                            <li class="sous-cat">
+                                <a href="nouveaux/pantalons" class="hov">Pantalons</a>
+                                <ul class="sous-sous-cat">
+                                    <li class="sous-sous-cat_redirect hov"><a href="">Joggings</a></li>
+                                    <li class="sous-sous-cat_redirect hov"><a href="">Jeans</a></li>
+                                    <li class="sous-sous-cat_redirect hov"><a href="">Cargo</a></li>
+                                </ul>
                             </li>
-                            <li class="">
-                                <a href="nouveaux/chaussures">Chaussures</a>
+                            <li class="sous-cat">
+                                <a href="nouveaux/chaussures" class="hov">Chaussures</a>
+                                <ul class="sous-sous-cat">
+                                    <li class="sous-sous-cat_redirect hov"><a href="">Baskets</a></li>
+                                    <li class="sous-sous-cat_redirect hov"><a href="">Boots</a></li>
+                                    <li class="sous-sous-cat_redirect hov"><a href="">Villes</a></li>
+                                </ul>
                             </li>
                         </ul>
                     </div>
@@ -67,14 +97,29 @@
 
                     <div class="dd-mnu">
                         <ul class="dropdown-menu">
-                            <li class="">
-                                <a href="nouveaux/hauts">Hauts</a>
+                            <li class="sous-cat">
+                                <a href="nouveaux/hauts" class="hov">Hauts</a>
+                                <ul class="sous-sous-cat">
+                                    <li class="sous-sous-cat_redirect hov"><a href="">T-shirts</a></li>
+                                    <li class="sous-sous-cat_redirect hov"><a href="">Pulls</a></li>
+                                    <li class="sous-sous-cat_redirect hov"><a href="">Veste</a></li>
+                                </ul>
                             </li>
-                            <li class="">
-                                <a href="nouveaux/pantalons">Pantalons</a>
+                            <li class="sous-cat">
+                                <a href="nouveaux/pantalons" class="hov">Pantalons</a>
+                                <ul class="sous-sous-cat">
+                                    <li class="sous-sous-cat_redirect hov"><a href="">Joggings</a></li>
+                                    <li class="sous-sous-cat_redirect hov"><a href="">Jeans</a></li>
+                                    <li class="sous-sous-cat_redirect hov"><a href="">Cargo</a></li>
+                                </ul>
                             </li>
-                            <li class="">
-                                <a href="nouveaux/chaussures">Chaussures</a>
+                            <li class="sous-cat">
+                                <a href="nouveaux/chaussures" class="hov">Chaussures</a>
+                                <ul class="sous-sous-cat">
+                                    <li class="sous-sous-cat_redirect hov"><a href="">Baskets</a></li>
+                                    <li class="sous-sous-cat_redirect hov"><a href="">Boots</a></li>
+                                    <li class="sous-sous-cat_redirect hov"><a href="">Villes</a></li>
+                                </ul>
                             </li>
                         </ul>
                     </div>
@@ -85,14 +130,29 @@
 
                     <div class="dd-mnu">
                         <ul class="dropdown-menu">
-                            <li class="">
-                                <a href="nouveaux/hauts">Hauts</a>
+                            <li class="sous-cat">
+                                <a href="nouveaux/hauts" class="hov">Hauts</a>
+                                <ul class="sous-sous-cat">
+                                    <li class="sous-sous-cat_redirect hov"><a href="">T-shirts</a></li>
+                                    <li class="sous-sous-cat_redirect hov"><a href="">Pulls</a></li>
+                                    <li class="sous-sous-cat_redirect hov"><a href="">Veste</a></li>
+                                </ul>
                             </li>
-                            <li class="">
-                                <a href="nouveaux/pantalons">Pantalons</a>
+                            <li class="sous-cat">
+                                <a href="nouveaux/pantalons" class="hov">Pantalons</a>
+                                <ul class="sous-sous-cat">
+                                    <li class="sous-sous-cat_redirect hov"><a href="">Joggings</a></li>
+                                    <li class="sous-sous-cat_redirect hov"><a href="">Jeans</a></li>
+                                    <li class="sous-sous-cat_redirect hov"><a href="">Cargo</a></li>
+                                </ul>
                             </li>
-                            <li class="">
-                                <a href="nouveaux/chaussures">Chaussures</a>
+                            <li class="sous-cat">
+                                <a href="nouveaux/chaussures" class="hov">Chaussures</a>
+                                <ul class="sous-sous-cat">
+                                    <li class="sous-sous-cat_redirect hov"><a href="">Baskets</a></li>
+                                    <li class="sous-sous-cat_redirect hov"><a href="">Boots</a></li>
+                                    <li class="sous-sous-cat_redirect hov"><a href="">Villes</a></li>
+                                </ul>
                             </li>
                         </ul>
                     </div>
@@ -103,14 +163,29 @@
 
                     <div class="dd-mnu">
                         <ul class="dropdown-menu">
-                            <li class="">
-                                <a href="nouveaux/hauts">Football</a>
+                            <li class="sous-cat">
+                                <a href="nouveaux/hauts" class="hov">Football</a>
+                                <ul class="sous-sous-cat">
+                                    <li class="sous-sous-cat_redirect hov"><a href="">Chaussures</a></li>
+                                    <li class="sous-sous-cat_redirect hov"><a href="">Tenues</a></li>
+                                    <li class="sous-sous-cat_redirect hov"><a href="">Equipes</a></li>
+                                </ul>
                             </li>
-                            <li class="">
-                                <a href="nouveaux/pantalons">Basketball</a>
+                            <li class="sous-cat">
+                                <a href="nouveaux/pantalons" class="hov">Basketball</a>
+                                <ul class="sous-sous-cat">
+                                    <li class="sous-sous-cat_redirect hov"><a href="">Chaussures</a></li>
+                                    <li class="sous-sous-cat_redirect hov"><a href="">Tenues</a></li>
+                                    <li class="sous-sous-cat_redirect hov"><a href="">Equipes</a></li>
+                                </ul>
                             </li>
-                            <li class="">
-                                <a href="nouveaux/chaussures">Handball</a>
+                            <li class="sous-cat">
+                                <a href="nouveaux/chaussures" class="hov">Handball</a>
+                                <ul class="sous-sous-cat">
+                                    <li class="sous-sous-cat_redirect hov"><a href="">Chaussures</a></li>
+                                    <li class="sous-sous-cat_redirect hov"><a href="">Tenues</a></li>
+                                    <li class="sous-sous-cat_redirect hov"><a href="">Equipes</a></li>
+                                </ul>
                             </li>
                         </ul>
                     </div>
