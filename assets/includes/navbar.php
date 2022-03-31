@@ -2,9 +2,9 @@
     <div class="top">
         <div class="reseaux">
             <ul>
-                <a href=""><li class="fb"><i class="fa-brands fa-facebook-square"></i></li></a>
-                <a href=""><li class="tw"><i class="fa-brands fa-twitter-square"></i></li></a>
-                <a href=""><li class="insta"><i class="fa-brands fa-instagram-square"></i></li></a>
+                <a href="" class="fb"><li><i class="fa-brands fa-facebook-square"></i></li></a>
+                <a href="" class="tw"><li><i class="fa-brands fa-twitter-square"></i></li></a>
+                <a href="" class="insta"><li><i class="fa-brands fa-instagram-square"></i></li></a>
             </ul>
         </div>
 
@@ -39,6 +39,9 @@
                                     <li class="sous-sous-cat_redirect hov"><a href="">Veste</a></li>
                                 </ul>
                             </li>
+
+                            <div class="separator"></div>
+
                             <li class="sous-cat">
                                 <a href="nouveaux/pantalons" class="hov">Pantalons</a>
                                 <ul class="sous-sous-cat">
@@ -47,6 +50,9 @@
                                     <li class="sous-sous-cat_redirect hov"><a href="">Cargo</a></li>
                                 </ul>
                             </li>
+
+                            <div class="separator"></div>
+
                             <li class="sous-cat">
                                 <a href="nouveaux/chaussures" class="hov">Chaussures</a>
                                 <ul class="sous-sous-cat">
@@ -72,6 +78,9 @@
                                     <li class="sous-sous-cat_redirect hov"><a href="">Veste</a></li>
                                 </ul>
                             </li>
+
+                            <div class="separator"></div>
+
                             <li class="sous-cat">
                                 <a href="nouveaux/pantalons" class="hov">Pantalons</a>
                                 <ul class="sous-sous-cat">
@@ -80,6 +89,9 @@
                                     <li class="sous-sous-cat_redirect hov"><a href="">Cargo</a></li>
                                 </ul>
                             </li>
+
+                            <div class="separator"></div>
+
                             <li class="sous-cat">
                                 <a href="nouveaux/chaussures" class="hov">Chaussures</a>
                                 <ul class="sous-sous-cat">
@@ -105,6 +117,9 @@
                                     <li class="sous-sous-cat_redirect hov"><a href="">Veste</a></li>
                                 </ul>
                             </li>
+
+                            <div class="separator"></div>
+
                             <li class="sous-cat">
                                 <a href="nouveaux/pantalons" class="hov">Pantalons</a>
                                 <ul class="sous-sous-cat">
@@ -113,6 +128,9 @@
                                     <li class="sous-sous-cat_redirect hov"><a href="">Cargo</a></li>
                                 </ul>
                             </li>
+
+                            <div class="separator"></div>
+
                             <li class="sous-cat">
                                 <a href="nouveaux/chaussures" class="hov">Chaussures</a>
                                 <ul class="sous-sous-cat">
@@ -138,6 +156,9 @@
                                     <li class="sous-sous-cat_redirect hov"><a href="">Veste</a></li>
                                 </ul>
                             </li>
+
+                            <div class="separator"></div>
+
                             <li class="sous-cat">
                                 <a href="nouveaux/pantalons" class="hov">Pantalons</a>
                                 <ul class="sous-sous-cat">
@@ -146,6 +167,9 @@
                                     <li class="sous-sous-cat_redirect hov"><a href="">Cargo</a></li>
                                 </ul>
                             </li>
+
+                            <div class="separator"></div>
+
                             <li class="sous-cat">
                                 <a href="nouveaux/chaussures" class="hov">Chaussures</a>
                                 <ul class="sous-sous-cat">
@@ -171,6 +195,9 @@
                                     <li class="sous-sous-cat_redirect hov"><a href="">Equipes</a></li>
                                 </ul>
                             </li>
+
+                            <div class="separator"></div>
+
                             <li class="sous-cat">
                                 <a href="nouveaux/pantalons" class="hov">Basketball</a>
                                 <ul class="sous-sous-cat">
@@ -179,6 +206,9 @@
                                     <li class="sous-sous-cat_redirect hov"><a href="">Equipes</a></li>
                                 </ul>
                             </li>
+
+                            <div class="separator"></div>
+                            
                             <li class="sous-cat">
                                 <a href="nouveaux/chaussures" class="hov">Handball</a>
                                 <ul class="sous-sous-cat">
