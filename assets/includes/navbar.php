@@ -14,6 +14,7 @@
         <div class="user">
             <ul>
                 <a href=""><li class="users">S'inscrire</li></a>
+                <li class="usersa">/</li>
                 <a href=""><li class="users">S'identifier</li></a>
             </ul>
         </div>

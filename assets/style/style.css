@@ -21,8 +21,9 @@ a {
 .separator {
     width: 1px;
     height: 100px;
-    background-color: lightslategrey;
+    background-color: rgb(230, 230, 230);
     border-radius: 50%;
+    margin: 0 20px;
 }
 
 header {
@@ -110,6 +111,13 @@ header {
     text-decoration: none;
     cursor: pointer;
     transition: 500ms ease;
+    margin: 0 10px;
+}
+
+.usersa {
+    display: block;
+    text-align: center;
+    text-decoration: none;
     margin: 0 10px;
 }
 
@@ -273,13 +281,13 @@ ul {
 @media screen and (min-width: 1024px) {
     
     .fav:hover {
-        background-color: lightgray;
+        background-color: rgb(240, 240, 240);
     }
     .shop:hover {
-        background-color: lightgray;
+        background-color: lrgb(240, 240, 240)y;
     }
     .acc:hover {
-        background-color: lightgray;
+        background-color: rgb(240, 240, 240);
     }
 }
 
