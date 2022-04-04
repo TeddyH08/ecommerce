@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="inscrption">
+        <h3>Inscription :</h3>
+
+        <form action="">
+            <label for="" class="titr_la">Pseudo ou adresse mail :</label>
+            <input type="text" class="titr_in">
+
+            <label for="" class="titr_la">Mot de passe :</label>
+            <input type="text" class="titr_in">
+
+            <div class="aide">
+                <div class="check"><input type="checkbox" class="checkbox"><label for="">Se souvenir de moi</label></div>
+                <a href="" class="mdp_oublie">mot de passe oublié ?</a>
+            </div>
+
+            <input type="submit" class="sub">
+        </form>
+
+        <div class="co_ins">
+            <p>Pas enore membre ?</p>
+            <a href="inscription.php" class="mdp_oublie">Rejoignez-nous !</a>
+        </div>
+    </div>
+</div>
