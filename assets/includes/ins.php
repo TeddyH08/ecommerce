@@ -19,10 +19,10 @@
                 <label for="">Genre :</label>
                 <div class="model_un">
                     <div class="femme">
-                        <input type="checkbox">Féminin</input>
+                        <input type="radio" name="genre">Féminin</input>
                     </div>
                     <div class="homme">
-                        <input type="checkbox">Masculin</input>
+                        <input type="radio" name="genre">Masculin</input>
                     </div>
                 </div>
             </div>
