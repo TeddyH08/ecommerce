@@ -3,6 +3,11 @@
     src: url(../font/Oswald-Regular.ttf);
 }
 
+@font-face {
+    font-family: 'Oswald_Light';
+    src: url(../font/Oswald-Light.ttf);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -359,7 +364,7 @@ ul {
     align-items: center;
     width: 100%;
     margin-top: 150px;
-    font-family: 'Oswald';
+    font-family: 'Oswald_Light';
 }
 
 .inscription {
@@ -433,6 +438,23 @@ form {
     font-size: 120%;
 }
 
+.conditions {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    width: 90%;
+}
+
+.conditions input {
+    margin-right: 5px;
+}
+
+.confident {
+    text-decoration: underline;
+}
+
 .aide {
     display: flex;
     flex-direction: row;
@@ -454,7 +476,7 @@ form {
 }
 
 .sub {
-    margin: 20px 25px;
+    margin: 10px 25px;
     padding: 5px 25px;
     font-size: 120%;
     cursor: pointer;

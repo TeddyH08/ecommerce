@@ -69,8 +69,9 @@
                 </div>
             </div>
 
-            <div class="model_deux">
-
+            <div class="conditions">
+                <input type="checkbox">
+                <p>En cochant la case, vous acceptez de vous conformer à la <a href="" class="confident">Politique de confidentialité</a> et aux <a href="" class="confident">Conditions générales.</a></p>
             </div>
 
             <input type="submit" class="sub" value="S'inscrire">
