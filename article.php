@@ -102,6 +102,6 @@ Article conforme a la description <br>
 
 </div> <!-- fin container -->
 
-    <script src="js/js.js"></script>
+    <script src="assets/js/js.js"></script>
 </body>
 </html>
