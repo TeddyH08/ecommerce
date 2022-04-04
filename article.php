@@ -9,6 +9,7 @@
     <title>Detail Article</title>
 </head>
 <body>
+<?php include "assets/includes/navbar.php"; ?>
 
 
 <div class="container">
@@ -101,6 +102,8 @@ Article conforme a la description <br>
 <br><br><br><br>
 
 </div> <!-- fin container -->
+    
+<?php include "assets/includes/footer.php"; ?>
 
     <script src="assets/js/js.js"></script>
 </body>
