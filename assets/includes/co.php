@@ -14,11 +14,11 @@
                 <a href="" class="mdp_oublie">mot de passe oublié ?</a>
             </div>
 
-            <input type="submit" class="sub">
+            <input type="submit" class="sub" value="S'identifier">
         </form>
 
         <div class="co_ins">
-            <p>Pas enore membre ?</p>
+            <p>Pas encore membre ?</p>
             <a href="inscription.php" class="mdp_oublie">Rejoignez-nous !</a>
         </div>
     </div>

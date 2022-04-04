@@ -429,6 +429,7 @@ form {
     border: none;
     border-radius: 2px;
     font-family: 'Oswald';
+    align-self: center;
 }
 
 .co_ins {
