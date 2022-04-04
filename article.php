@@ -9,7 +9,7 @@
     <title>Detail Article</title>
 </head>
 <body>
-<br><br><br><br>
+
 
 <div class="container">
 
