@@ -11,6 +11,7 @@
 body {
     margin: 0;
     padding: 0;
+    font-family: 'Oswald';
 }
 
 a {
@@ -349,4 +350,92 @@ ul {
     .logo a {
         width: 20%;
     }
+}
+
+/* Connexion */
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 150px;
+}
+
+.connexion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 5px rgb(210, 210, 210);
+    border-radius: 5px;
+    width: 30%;
+}
+
+h3 {
+    font-size: 250%;
+    margin: 15px 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 90%;
+}
+
+.titr_la {
+    font-size: 130%;
+    margin: 5px 15px;
+    width: 90%;
+}
+
+.titr_in {
+    font-size: 130%;
+    margin: 3px 15px;
+    width: 90%;
+    border: 1px black solid;
+    border-radius: 5px;
+}
+
+.aide {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 15px;
+    width: 90%;
+}
+
+.checkbox {
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.mdp_oublie {
+    text-decoration: underline;
+    color: black;
+    margin: 0 5px;
+}
+
+.sub {
+    margin: 10px 15px;
+    padding: 0 15px;
+    font-size: 120%;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 2px;
+    font-family: 'Oswald';
+}
+
+.co_ins {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 15px;
 }
