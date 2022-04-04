@@ -385,11 +385,12 @@ form {
     width: 90%;
 }
 
-.nom_prenom {
+.model_un {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
     margin: 5px 0;
 }
 
@@ -404,12 +405,12 @@ form {
     width: 100%;
 }
 
-.nom input, .prenom input, .mail input, .mdp input {
+.nom input, .prenom input, .model_deux input {
     border: 1px black solid;
     border-radius: 5px;
 }
 
-.mail {
+.model_deux {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -418,18 +419,18 @@ form {
     margin: 5px 0;
 }
 
-.mdp {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin: 5px 0;
-}
-
-.mail label, .mail input, .mdp label, .mdp input {
+.model_deux label, .model_deux input {
     font-size: 130%;
     width: 90%;
+}
+
+.femme, .homme {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    width: 20% !important;
+    font-size: 120%;
 }
 
 .aide {
@@ -453,14 +454,14 @@ form {
 }
 
 .sub {
-    margin: 10px 15px;
-    padding: 0 15px;
+    margin: 20px 25px;
+    padding: 5px 25px;
     font-size: 120%;
     cursor: pointer;
     background-color: black;
     color: white;
     border: none;
-    border-radius: 2px;
+    border-radius: 3px;
     font-family: 'Oswald';
 }
 
@@ -470,41 +471,41 @@ form {
     justify-content: center;
     align-items: center;
     width: 90%;
-    margin: 15px;
+    margin: 10px;
 }
 
 @media screen and (max-width: 1200px) {
-    .connexion {
+    .inscription {
         width: 40%;
     }
 }
 
 @media screen and (max-width: 1000px) {
-    .connexion {
+    .inscription {
         width: 50%;
     }
 }
 
 @media screen and (max-width: 750px) {
-    .connexion {
+    .inscription {
         width: 60%;
     }
 }
 
 @media screen and (max-width: 550px) {
-    .connexion {
+    .inscription {
         width: 70%;
     }
 }
 
 @media screen and (max-width: 450px) {
-    .connexion {
+    .inscription {
         width: 90%;
     }
 }
 
 @media screen and (max-width: 370px) {
-    .connexion {
+    .inscription {
         width: 95%;
     }
 }

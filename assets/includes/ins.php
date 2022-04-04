@@ -3,26 +3,74 @@
         <h3>Inscription :</h3>
 
         <form action="">
-            <div class="nom_prenom">
+            <div class="model_un">
                 <div class="nom">
-                    <label for="">Nom</label>
+                    <label for="">Nom :</label>
                     <input type="text">
                 </div>
 
                 <div class="prenom">
-                    <label for="">Prénom</label>
+                    <label for="">Prénom :</label>
                     <input type="text">
                 </div>
             </div>
 
-            <div class="mail">
+            <div class="model_deux">
+                <label for="">Genre :</label>
+                <div class="model_un">
+                    <div class="femme">
+                        <input type="checkbox">Féminin</input>
+                    </div>
+                    <div class="homme">
+                        <input type="checkbox">Masculin</input>
+                    </div>
+                </div>
+            </div>
+
+            <div class="model_deux">
+                <label for="">Date de naissance :</label>
+                <input type="date">
+            </div>
+
+            <div class="model_deux">
                 <label for="">Adresse mail :</label>
                 <input type="text">
             </div>
 
-            <div class="mdp">
-                <label for="" class="titr_la">Mot de passe :</label>
-                <input type="text" class="titr_in">
+            <div class="model_deux">
+                <label for="">Mot de passe :</label>
+                <input type="text">
+            </div>
+
+            <div class="model_deux">
+                <label for="">Confirmation du mot de passe :</label>
+                <input type="text">
+            </div>
+
+            <div class="model_deux">
+                <label for="">Pays :</label>
+                <input type="text">
+            </div>
+
+            <div class="model_deux">
+                <label for="">Adresse :</label>
+                <input type="text">
+            </div>
+
+            <div class="model_un">
+                <div class="nom">
+                    <label for="">Code postal :</label>
+                    <input type="text">
+                </div>
+
+                <div class="prenom">
+                    <label for="">Ville :</label>
+                    <input type="text">
+                </div>
+            </div>
+
+            <div class="model_deux">
+
             </div>
 
             <input type="submit" class="sub" value="S'inscrire">
