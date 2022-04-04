@@ -439,3 +439,39 @@ form {
     width: 90%;
     margin: 15px;
 }
+
+@media screen and (max-width: 1200px) {
+    .connexion {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .connexion {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .connexion {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .connexion {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .connexion {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .connexion {
+        width: 95%;
+    }
+}
