@@ -24,7 +24,7 @@
 <?php include "assets/includes/navbar.php"; ?>
 
 
-<div class="container">
+<div class="container_article">
 
 <div class="article">
 
