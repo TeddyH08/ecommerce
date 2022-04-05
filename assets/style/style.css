@@ -3,6 +3,11 @@
     src: url(../font/Oswald-Regular.ttf);
 }
 
+@font-face {
+    font-family: 'Oswald_Light';
+    src: url(../font/Oswald-Light.ttf);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -360,6 +365,7 @@ ul {
     align-items: center;
     width: 100%;
     margin-top: 150px;
+    font-family: 'Oswald_Light';
 }
 
 .connexion {
