@@ -17,7 +17,7 @@
 
             <div class="model_deux">
                 <label for="">Genre :</label>
-                <div class="model_un">
+                <div class="model_trois">
                     <div class="femme">
                         <input type="radio" name="genre">Féminin</input>
                     </div>
