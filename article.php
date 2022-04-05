@@ -23,6 +23,7 @@
 <body>
 <?php include "assets/includes/navbar.php"; ?>
 
+<div class="container"></div>
 
 <div class="container_article">
 
