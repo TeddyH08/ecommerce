@@ -13,7 +13,7 @@
 
         <div class="user">
             <ul>
-                <a href=""><li class="users">S'inscrire</li></a>
+                <a href="inscription.php"><li class="users">S'inscrire</li></a>
                 <a href="connexion.php"><li class="users">S'identifier</li></a>
             </ul>
         </div>

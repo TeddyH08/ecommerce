@@ -8,7 +8,7 @@
 
         <link rel="shortcut icon" href="assets/img/icon/icon.png">
 
-        <title>E-Commerce</title>
+        <title>Inscription</title>
 
         <link rel="stylesheet" href="assets/style/style.css">
         <link 
@@ -22,6 +22,7 @@
 
     <body>
         <?php include "assets/includes/navbar.php"; ?>
+        <?php include "assets/includes/ins.php"; ?>
         <?php include "assets/includes/footer.php"; ?>
     </body>
 </html>

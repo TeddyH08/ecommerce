@@ -357,7 +357,7 @@ ul {
     }
 }
 
-/* Connexion */
+/* Inscription / Connexion */
 
 .container {
     display: flex;
@@ -366,6 +366,16 @@ ul {
     width: 100%;
     margin-top: 150px;
     font-family: 'Oswald_Light';
+}
+
+.inscription {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 5px rgb(210, 210, 210);
+    border-radius: 5px;
+    width: 40%;
 }
 
 .connexion {
@@ -387,6 +397,37 @@ form {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    width: 90%;
+}
+
+.model_un {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 5px 0;
+}
+
+.nom {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.prenom {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
+
+.nom label, .nom input, .prenom label, .prenom input {
+    font-size: 130%;
+    width: 100%;
+}
+
+.nom input, .prenom input, .model_deux input {
     align-items: flex-start;
     width: 90%;
 }
@@ -403,6 +444,68 @@ form {
     width: 90%;
     border: 1px black solid;
     border-radius: 5px;
+}
+
+.model_deux {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 5px 0;
+}
+
+.model_deux label, .model_deux input {
+    font-size: 130%;
+    width: 90%;
+}
+
+.model_trois {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 90%;
+    margin: 5px 0;
+}
+
+.femme {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    width: 30% !important;
+    font-size: 120%;
+}
+
+.homme {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    width: 31.2% !important;
+    font-size: 120%;
+}
+
+.conditions {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    width: 90%;
+}
+
+.conditions input {
+    margin-right: 5px;
+}
+
+.confident {
+    text-decoration: underline;
+}
+
+.confident:hover {
+    color: gray;
 }
 
 .aide {
@@ -426,14 +529,14 @@ form {
 }
 
 .sub {
-    margin: 10px 15px;
-    padding: 0 15px;
+    margin: 10px 25px;
+    padding: 5px 25px;
     font-size: 120%;
     cursor: pointer;
     background-color: black;
     color: white;
     border: none;
-    border-radius: 2px;
+    border-radius: 3px;
     font-family: 'Oswald';
     align-self: center;
 }
@@ -444,41 +547,41 @@ form {
     justify-content: center;
     align-items: center;
     width: 90%;
-    margin: 15px;
+    margin: 10px;
 }
 
 @media screen and (max-width: 1200px) {
-    .connexion {
+    .inscription, .connexion {
         width: 40%;
     }
 }
 
 @media screen and (max-width: 1000px) {
-    .connexion {
+    .inscription, .connexion {
         width: 50%;
     }
 }
 
 @media screen and (max-width: 750px) {
-    .connexion {
+    .inscription, .connexion {
         width: 60%;
     }
 }
 
 @media screen and (max-width: 550px) {
-    .connexion {
+    .inscription, .connexion {
         width: 70%;
     }
 }
 
 @media screen and (max-width: 450px) {
-    .connexion {
+    .inscription, .connexion {
         width: 90%;
     }
 }
 
 @media screen and (max-width: 370px) {
-    .connexion {
+    .inscription, .connexion {
         width: 95%;
     }
 }
