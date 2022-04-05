@@ -399,10 +399,16 @@ form {
     margin: 5px 0;
 }
 
-.nom, .prenom {
+.nom {
     display: flex;
     flex-direction: column;
-    width: 40%;
+    width: 50%;
+}
+
+.prenom {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
 }
 
 .nom label, .nom input, .prenom label, .prenom input {
@@ -438,12 +444,21 @@ form {
     margin: 5px 0;
 }
 
-.femme, .homme {
+.femme {
     display: flex;
     flex-direction: row;
     justify-content: start;
     align-items: center;
     width: 30% !important;
+    font-size: 120%;
+}
+
+.homme {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    width: 31.2% !important;
     font-size: 120%;
 }
 
@@ -462,6 +477,10 @@ form {
 
 .confident {
     text-decoration: underline;
+}
+
+.confident:hover {
+    color: gray;
 }
 
 .aide {
