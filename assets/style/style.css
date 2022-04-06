@@ -676,25 +676,48 @@ h1{
   .a-propos{
     width: 33%;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    
+    align-items: flex-start;
+  }
+
+  .a-propos ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
   }
 
   .nous-contacter{
     width: 33%;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    
+    align-items: flex-start;
+  }
+
+  .nous-contacter ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
   }
 
   .nous-suivre{
     width: 33%;
     display: flex;
-    flex-direction: column;
     justify-content: center;
+    align-items: flex-start;
+  }
 
+  .nous-suivre ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .icone-reseau-tb {
+      display: flex !important;
+      flex-direction: row !important;
   }
 
   footer i{
