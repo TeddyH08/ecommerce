@@ -374,14 +374,14 @@ h1{
     letter-spacing: 2px;
 }
 
-h2{
+.title_h2{
     font-family: 'Poppins';
     font-weight: 400;
     letter-spacing: 2px;
     font-size: 27px;
     
 }
-h3{
+.title_h3{
     font-family: 'Poppins';
     font-weight: 400;
     letter-spacing: 2px;
@@ -394,7 +394,6 @@ h3{
 }
 
 .titre-accueil-h1{
-    margin-top: 30px;
     display: flex;
     background-color: #df8270;
     height: 55px;
@@ -434,7 +433,7 @@ h3{
 .image1-tb{
     grid-column: 1/2;
     grid-row: 1/11;
-    background-image: url(../images/main-banner-desktop-10-03.jpg);
+    background-image: url(../img/main-banner-desktop-10-03.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     margin-bottom: 20px;
@@ -444,7 +443,7 @@ h3{
 .image2-tb{
     grid-column: 2/3;
     grid-row: 1/6;
-    background-image: url(../images/banner2-desktop-03-10@1x.jpg);
+    background-image: url(../img/banner2-desktop-03-10@1x.jpg);
     background-repeat: no-repeat;
     margin-bottom: 25px;
     background-size: cover;
@@ -454,7 +453,7 @@ h3{
 .image3-tb{
     grid-column: 2/3;
     grid-row: 6/10;
-    background-image: url(../images/banner-3-desktop-03-10@1x.png);
+    background-image: url(../img/banner-3-desktop-03-10@1x.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
