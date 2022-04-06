@@ -28,7 +28,7 @@
             <div class="menu">
                 <ul>
                     <li class="categorie dropdown">
-                        <a href="#">Nouveautés</a>
+                        <a href="categorie.php">Nouveautés</a>
 
                         <div class="dd-mnu">
                             <ul class="dropdown-menu">
@@ -67,7 +67,7 @@
                     </li>
 
                     <li class="categorie dropdown">
-                        <a href="#">Hommes</a>
+                        <a href="categorie.php">Hommes</a>
 
                         <div class="dd-mnu">
                             <ul class="dropdown-menu">
@@ -106,7 +106,7 @@
                     </li>
 
                     <li class="categorie dropdown">
-                        <a href="#">Femmes</a>
+                        <a href="categorie.php">Femmes</a>
 
                         <div class="dd-mnu">
                             <ul class="dropdown-menu">
@@ -145,7 +145,7 @@
                     </li>
 
                     <li class="categorie dropdown">
-                        <a href="#">Enfants</a>
+                        <a href="categorie.php">Enfants</a>
 
                         <div class="dd-mnu">
                             <ul class="dropdown-menu">
@@ -184,7 +184,7 @@
                     </li>
 
                     <li class="categorie dropdown">
-                        <a href="#">Sports</a>
+                        <a href="categorie.php">Sports</a>
 
                         <div class="dd-mnu">
                             <ul class="dropdown-menu">
