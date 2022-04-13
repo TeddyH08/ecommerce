@@ -1,11 +1,7 @@
 <header>
     <div class="top">
         <div class="reseaux">
-            <ul>
-                <a href="" class="fb"><li class="res"><i class="fa-brands fa-facebook-square"></i></li></a>
-                <a href="" class="tw"><li class="res"><i class="fa-brands fa-twitter-square"></i></li></a>
-                <a href="" class="insta"><li class="res"><i class="fa-brands fa-instagram-square"></i></li></a>
-            </ul>
+          
         </div>
 
         <div class="blank">
