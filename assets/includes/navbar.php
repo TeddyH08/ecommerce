@@ -9,15 +9,15 @@
 
         <div class="user">
             <ul>
-                <a href="inscription.php"><li class="users">S'inscrire</li></a>
-                <a href="connexion.php"><li class="users">S'identifier</li></a>
+                <a href="Inscription"><li class="users">S'inscrire</li></a>
+                <a href="Connexion"><li class="users">S'identifier</li></a>
             </ul>
         </div>
     </div>
 
 <nav class="navbar">
         <div class="logo">
-                <a href="index.php"><img src="assets/img/logo.jpg" class="log"></a>
+                <a href="Accueil"><img src="assets/img/logo.jpg" class="log"></a>
         </div>
 
         <div id="nav" class="respon">
