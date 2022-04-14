@@ -1144,6 +1144,17 @@ form {
     margin-bottom: 5px;
 }
 
+/* Panier */
+
+.pani {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 80%;
+    margin-bottom: 100px;
+}
+
 @media screen and (max-width: 1200px) {
     .inscription, .connexion {
         width: 40%;

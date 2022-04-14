@@ -5,3 +5,5 @@ RewriteRule ^Accueil$ index.php
 RewriteRule ^Inscription$ inscription.php
 RewriteRule ^Connexion$ connexion.php
 RewriteRule ^Favoris$ favoris.php
+RewriteRule ^Panier$ panier.php
+RewriteRule ^Profil$ profil.php
