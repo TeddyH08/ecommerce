@@ -663,8 +663,10 @@ h1{
       width: 100%;
       margin-left: auto;
       margin-right: auto;
-      margin-top: 75px;
-      margin-bottom: 40px;
+      margin-top: 35px;
+      padding-top: 40px;
+      padding-bottom: 40px;
+      background-color: rgb(30, 30, 30);
   }
   footer ul{
       list-style: none;
@@ -742,8 +744,11 @@ h1{
   }
 
   footer  li a:hover{
-    color: #000;
+    color: #FFFFFF;
+}
 
+.foot {
+    color: #FFFFFF !important;
 }
 
 /* MEDIA */

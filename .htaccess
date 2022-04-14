@@ -4,3 +4,4 @@ RewriteBase "/ecommerce/"
 RewriteRule ^Accueil$ index.php
 RewriteRule ^Inscription$ inscription.php
 RewriteRule ^Connexion$ connexion.php
+RewriteRule ^Favoris$ favoris.php
