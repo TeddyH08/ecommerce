@@ -20,6 +20,22 @@
                     <img src="assets/img/hauts/thumb_c290x39040e9b4a6b5c4fceb814c0ef728c79f99.jpg" class="fav_img">
                 </div>
             </div>
+
+            <div class="infos_fav">
+                <h4>Nom de l'article</h4>
+                <p>Taille :</p>
+                <p>Couleur :</p>
+                <p>Référence :</p>
+                <h4>Prix :</h4>
+            </div>
+
+            <div class="description_fav">
+                <h4>Description :</h4>
+                <p>Carrure :</p>
+                <p>Longueur :</p>
+                <p>Largeur :</p>
+                <p>Note :</p>
+            </div>
         </div>
 
         <div class="article_fav">
@@ -35,6 +51,22 @@
                 <div>
                     <img src="assets/img/hauts/thumb_c290x39040e9b4a6b5c4fceb814c0ef728c79f99.jpg" class="fav_img">
                 </div>
+            </div>
+
+            <div class="infos_fav">
+                <h4>Nom de l'article</h4>
+                <p>Taille :</p>
+                <p>Couleur :</p>
+                <p>Référence :</p>
+                <h4>Prix :</h4>
+            </div>
+
+            <div class="description_fav">
+                <h4>Description :</h4>
+                <p>Carrure :</p>
+                <p>Longueur :</p>
+                <p>Largeur :</p>
+                <p>Note :</p>
             </div>
         </div>
         
@@ -51,6 +83,22 @@
                 <div>
                     <img src="assets/img/hauts/thumb_c290x39040e9b4a6b5c4fceb814c0ef728c79f99.jpg" class="fav_img">
                 </div>
+            </div>
+
+            <div class="infos_fav">
+                <h4>Nom de l'article</h4>
+                <p>Taille :</p>
+                <p>Couleur :</p>
+                <p>Référence :</p>
+                <h4>Prix :</h4>
+            </div>
+
+            <div class="description_fav">
+                <h4>Description :</h4>
+                <p>Carrure :</p>
+                <p>Longueur :</p>
+                <p>Largeur :</p>
+                <p>Note :</p>
             </div>
         </div>
     </div>
