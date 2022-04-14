@@ -281,13 +281,13 @@ ul {
 @media screen and (min-width: 1024px) {
     
     .fav:hover {
-        background-color: lightgray;
+        background-color: lightgrey;
     }
     .shop:hover {
-        background-color: lightgray;
+        background-color: lightgrey;
     }
     .acc:hover {
-        background-color: lightgray;
+        background-color: lightgrey;
     }
 }
 
@@ -1148,11 +1148,149 @@ form {
 
 .pani {
     display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 80%;
+    margin-bottom: 100px;
+}
+
+.panie {
+    width: 70%;
+}
+
+.article_pan {
+    display: flex;
+    flex-direction: row;
+    width: 75%;
+    margin-top: 40px;
+}
+
+.img_pan {
+    width: 15%;
+}
+
+.pan_img {
+    width: 100%;
+}
+
+.infos_pan {
+    display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    width: 50%;
+    padding-left: 30px;
+}
+
+.infos_pan h4 {
+    font-size: 115%;
+    margin-bottom: 5px;
+}
+
+.infos_pan p {
+    font-size: 100%;
+    margin-bottom: 5px;
+}
+
+.quantite_pan {
+    width: 30%;
+}
+
+.quantite_pan h4 {
+    font-size: 115%;
+    margin-bottom: 5px;
+}
+
+select {
+    font-size: 100%;
+}
+
+.suppr {
+    margin-left: 5px;
+}
+
+.quantite_pan a {
+    text-decoration: underline;
+}
+
+
+.resume {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border: 1px black solid;
+    background-color: rgb(240, 240, 240);
+    width: 30%;
+    border-radius: 3px;
+}
+
+.resume h4 {
+    font-size: 150%;
+}
+
+.artic {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    font-size: 130%;
+    margin: 5px 0;
+}
+
+.paie {
+    font-size: 130%;
+    margin-top: 30px;
+    background-color: #df8270;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 3px;
+}
+
+/* Profil */
+
+.prof {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
     width: 80%;
     margin-bottom: 100px;
+}
+
+.infos_profil {
+    display: flex;
+    flex-direction: row;
+    font-size: 130%;
+    width: 100%;
+}
+
+.base_profil {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.base_profil p {
+    padding: 5px;
+    margin: 5px 0;
+    border: 1px white solid;
+}
+
+.pen {
+    background-color: lightgrey;
+    padding: 5px 10px;
+    margin: 8px 0;
+    font-size: 120%;
+    border-radius: 3px;
+    border: 1px black solid;
+}
+
+.m {
+    margin-top: 50px;
 }
 
 @media screen and (max-width: 1200px) {
