@@ -1060,6 +1060,41 @@ form {
     margin: 10px;
 }
 
+/* Favoris */
+
+.favo {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 80%;
+}
+
+.titre_h2 {
+    font-size: 250%;
+    font-family: 'Poppins';
+    margin-bottom: 20px;
+}
+
+.vide {
+    font-size: 150%;
+}
+
+.article_fav {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.img_fav {
+    width: 15%;
+}
+
+.fav_img {
+    width: 100%;
+}
+
 @media screen and (max-width: 1200px) {
     .inscription, .connexion {
         width: 40%;
