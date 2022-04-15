@@ -11,7 +11,7 @@
 
             <div class="aide">
                 <div class="check"><input type="checkbox" class="checkbox"><label for="">Se souvenir de moi</label></div>
-                <a href="" class="mdp_oublie">mot de passe oublié ?</a>
+                <a href="verificationmail.php" class="mdp_oublie">mot de passe oublié ?</a>
             </div>
 
             <input type="submit" class="sub" value="S'identifier">
