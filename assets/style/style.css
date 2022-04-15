@@ -1251,6 +1251,13 @@ select {
     border-radius: 3px;
 }
 
+.sepa {
+    width: 90%;
+    height: 2px;
+    background-color: black;
+    margin: 15px 0;
+}
+
 /* Profil */
 
 .prof {
