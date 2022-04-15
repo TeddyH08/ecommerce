@@ -11,6 +11,7 @@
                 <div class="infos_pan">
                     <h4>Nom de l'article</h4>
                     <p>Référence :</p>
+                    <p>Taille :</p>
                     <h4>Prix :</h4>
                 </div>
 
@@ -96,17 +97,24 @@
 
             <div class="artic">
                 <p>Nom de l'article</p>
-                <p>Prix :</p>
+                <p>Prix</p>
             </div>
 
             <div class="artic">
                 <p>Nom de l'article</p>
-                <p>Prix :</p>
+                <p>Prix</p>
             </div>
 
             <div class="artic">
                 <p>Nom de l'article</p>
-                <p>Prix :</p>
+                <p>Prix</p>
+            </div>
+
+            <div class="sepa"></div>
+
+            <div class="artic">
+                <p>Total à payer :</p>
+                <p>Prix</p>
             </div>
 
             <a href="" class="paie">Paiement</a>
