@@ -1,3 +1,13 @@
+<?php
+
+    $sqlRequestusers = ("SELECT * FROM utilisateurs");
+    $pdoStatusers = $db -> prepare($sqlRequestusers);
+    $pdoStatusers->execute();
+
+    $resultusers = $pdoStatusers->fetchAll(PDO::FETCH_ASSOC);
+
+?>
+
 <div class="container">
     <div class="crud">
         <h2 class="titre_h2">Bienvenue dans le CRUD</h2>
@@ -25,23 +35,25 @@
             </thead>
 
             <tbody>
-                <tr>
-                    <td>chien</td>
-                    <td>chien</td>
-                    <td>chien</td>
-                    <td>chien</td>
-                    <td>chien</td>
-                    <td>chien</td>
-                    <td>chien</td>
-                    <td>chien</td>
-                    <td>chien</td>
-                    <td>chien</td>
-                    <td>chien</td>
-                    <td>chien</td>
-                    <td><a href="" class="lire">Lire</a></td>
-                    <td><a href="" class="up">Modifier</a></td>
-                    <td><a href="" class="suppr">Supprimer</a></td>
-                </tr>
+                <?php foreach ($resultusers as $value) { ?>
+                    <tr>
+                        <td><?php echo $value['id_utilisateurs']; ?></td>
+                        <td><?php echo $value['prenom_utilisateurs']; ?></td>
+                        <td><?php echo $value['nom_utilisateurs']; ?></td>
+                        <td><?php echo $value['civilite_utilisateurs']; ?></td>
+                        <td><?php echo $value['mail_utilisateurs']; ?></td>
+                        <td><?php echo $value['datenaissance_utilisateurs']; ?></td>
+                        <td><?php echo $value['tel_utilisateurs']; ?></td>
+                        <td><?php echo $value['rue_utilisateurs']; ?></td>
+                        <td><?php echo $value['cp_utilisateurs']; ?></td>
+                        <td><?php echo $value['ville_utilisateur']; ?></td>
+                        <td><?php echo $value['pays_utilisateurs']; ?></td>
+                        <td><?php echo $value['id_roles']; ?></td>
+                        <td><a href="" class="lire">Lire</a></td>
+                        <td><a href="" class="up">Modifier</a></td>
+                        <td><a href="" class="suppr">Supprimer</a></td>
+                    </tr>
+                <?php } ?>
             </tbody>
         </table>
 

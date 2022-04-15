@@ -1308,7 +1308,7 @@ select {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 80%;
+    width: 90%;
 }
 
 #table_id_wrapper {
@@ -1323,21 +1323,21 @@ select {
     background-color: blue;
     color: white;
     padding: 2px 5px;
-    border-radius: 2px;
+    border-radius: 5px;
 }
 
 .up {
     background-color: green;
     color: white;
     padding: 2px 5px;
-    border-radius: 2px;
+    border-radius: 5px;
 }
 
 .suppr {
     background-color: red;
     color: white;
     padding: 2px 5px;
-    border-radius: 2px;
+    border-radius: 5px;
 }
 
 /* Responsive */
