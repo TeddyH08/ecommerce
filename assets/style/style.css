@@ -1301,6 +1301,47 @@ select {
     margin-top: 50px;
 }
 
+/* CRUD */
+
+.crud {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+
+#table_id_wrapper {
+    margin-bottom: 100px;
+}
+
+#table2_id_wrapper {
+    margin-bottom: 100px;
+}
+
+.lire {
+    background-color: blue;
+    color: white;
+    padding: 2px 5px;
+    border-radius: 2px;
+}
+
+.up {
+    background-color: green;
+    color: white;
+    padding: 2px 5px;
+    border-radius: 2px;
+}
+
+.suppr {
+    background-color: red;
+    color: white;
+    padding: 2px 5px;
+    border-radius: 2px;
+}
+
+/* Responsive */
+
 @media screen and (max-width: 1200px) {
     .inscription, .connexion {
         width: 40%;
