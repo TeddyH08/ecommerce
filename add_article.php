@@ -45,14 +45,14 @@
 
                 <label for="categorie">Catégorie :</label>
                 <select name="categorie">
-                    <option value="homme">homme</option>
-                    <option value="femme">femme</option>
+                    <option value="homme">1</option>
+                    <option value="femme">2</option>
                 </select>
 
                 <label for="s_categorie">Sous catégorie :</label>
                 <select name="s_categorie">
-                    <option value="hauts">Hauts</option>
-                    <option value="pantalons">Pantalons</option>
+                    <option value="hauts">1</option>
+                    <option value="pantalons">2</option>
                 </select>
 
                 <input type="submit" class="sub" value="Ajouter">
