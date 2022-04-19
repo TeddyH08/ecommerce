@@ -49,7 +49,7 @@
                 <label for="tel">Téléphone :</label>
                 <input type="number" name="tel">
 
-                <label for="mdp">Mot de passe</label>
+                <label for="mdp">Mot de passe :</label>
                 <input type="password" name="mdp">
 
                 <label for="mdp1">Confirmation du mot de passe :</label>

@@ -70,7 +70,7 @@
             <thead>
                 <h2 class="title_h2">Données des Articles :</h2>
 
-                <a href="" class="add"><i class="fa-solid fa-plus"></i> Ajouter</a>
+                <a href="add_article.php" class="add"><i class="fa-solid fa-plus"></i> Ajouter</a>
 
                 <tr>
                     <th>Id de l'article</th>
