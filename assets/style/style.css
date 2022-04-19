@@ -1307,8 +1307,12 @@ select {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     width: 90%;
+}
+
+.title_h2, .titre_h2 {
+    align-self: center;
 }
 
 #table_id_wrapper {
@@ -1319,25 +1323,85 @@ select {
     margin-bottom: 100px;
 }
 
-.lire {
-    background-color: blue;
+td {
+    text-align: center;
+}
+
+.add {
+    background-color: rgb(1, 207, 29);
     color: white;
-    padding: 2px 5px;
+    padding: 5px 15px;
+    border-radius: 5px;
+    margin: 15px 0;
+    font-family: 'Oswald_Light';
+}
+
+.lire {
+    background-color: rgb(0, 204, 255);
+    color: white;
+    padding: 5px 15px;
+    margin: 5px 0;
     border-radius: 5px;
 }
 
 .up {
-    background-color: green;
-    color: white;
-    padding: 2px 5px;
+    background-color: rgb(255, 213, 0);
+    color: black;
+    padding: 5px 15px;
+    margin: 5px 0;
     border-radius: 5px;
 }
 
 .suppr {
     background-color: red;
     color: white;
-    padding: 2px 5px;
+    padding: 5px 15px;
+    margin: 5px 0;
     border-radius: 5px;
+}
+
+.edit {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+}
+
+.cont {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    font-size: 120%;
+}
+
+.inf {
+    margin: 5px 10px;
+}
+
+.ajout {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+}
+
+.form_crud {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 40%;
+    font-size: 135%;
+}
+
+.form_crud input {
+    margin-bottom: 10px;
+    width: 50%;
+    font-size: 135%;
 }
 
 /* Responsive */

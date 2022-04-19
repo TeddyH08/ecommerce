@@ -6,6 +6,12 @@
 
     $resultusers = $pdoStatusers->fetchAll(PDO::FETCH_ASSOC);
 
+    $sqlRequestarticle = ("SELECT * FROM articles");
+    $pdoStatarticle = $db -> prepare($sqlRequestarticle);
+    $pdoStatarticle->execute();
+
+    $resultarticle = $pdoStatarticle->fetchAll(PDO::FETCH_ASSOC);
+
 ?>
 
 <div class="container">
@@ -14,7 +20,10 @@
 
         <table id="table_id" class="display">
             <thead>
-            <h2 class="title_h2">Données des Utilisateurs :</h2>
+                <h2 class="title_h2">Données des Utilisateurs :</h2>
+
+                <a href="add_utilisateur.php" class="add"><i class="fa-solid fa-plus"></i> Ajouter</a>
+
                 <tr>
                     <th>Id de l'utilisateur</th>
                     <th>Prénom de l'utilisateur</th>
@@ -49,18 +58,20 @@
                         <td><?php echo $value['ville_utilisateur']; ?></td>
                         <td><?php echo $value['pays_utilisateurs']; ?></td>
                         <td><?php echo $value['id_roles']; ?></td>
-                        <td><a href="" class="lire">Lire</a></td>
-                        <td><a href="" class="up">Modifier</a></td>
-                        <td><a href="" class="suppr">Supprimer</a></td>
+                        <td><a href="edit_utilisateur.php?id=<?php echo $value['id_utilisateurs']; ?>" class="lire"><i class="fa-brands fa-readme"></i></a></td>
+                        <td><a href="up_utilisateur.php?id=<?php echo $value['id_utilisateurs']; ?>" class="up"><i class="fa-solid fa-pencil"></i></a></td>
+                        <td><a href="delete_utilisateur.php?id=<?php echo $value['id_utilisateurs']; ?>" class="suppr"><i class="fa-solid fa-trash"></i></a></td>
                     </tr>
                 <?php } ?>
             </tbody>
         </table>
 
         <table id="table2_id" class="display">
-            <h2 class="title_h2">Données des Articles :</h2>
-
             <thead>
+                <h2 class="title_h2">Données des Articles :</h2>
+
+                <a href="" class="add"><i class="fa-solid fa-plus"></i> Ajouter</a>
+
                 <tr>
                     <th>Id de l'article</th>
                     <th>Nom de l'article</th>
@@ -77,19 +88,21 @@
             </thead>
 
             <tbody>
-                <tr>
-                    <td>chien</td>
-                    <td>chien</td>
-                    <td>chien</td>
-                    <td>chien</td>
-                    <td>chien</td>
-                    <td>chien</td>
-                    <td>chien</td>
-                    <td>chien</td>
-                    <td><a href="" class="lire">Lire</a></td>
-                    <td><a href="" class="up">Modifier</a></td>
-                    <td><a href="" class="suppr">Supprimer</a></td>
-                </tr>
+                <?php foreach ($resultarticle as $value) { ?>
+                    <tr>
+                        <td><?php echo $value['id_articles']; ?></td>
+                        <td><?php echo $value['nom_articles']; ?></td>
+                        <td><?php echo $value['marques_articles']; ?></td>
+                        <td><?php echo $value['description_articles']; ?></td>
+                        <td><?php echo $value['prix_articles']; ?></td>
+                        <td><?php echo $value['genres_articles']; ?></td>
+                        <td><?php echo $value['id_categories']; ?></td>
+                        <td><?php echo $value['id_sous_categories']; ?></td>
+                        <td><a href="edit_article.php?id=<?php echo $value['id_articles']; ?>" class="lire"><i class="fa-brands fa-readme"></i></a></td>
+                        <td><a href="" class="up"><i class="fa-solid fa-pencil"></i></a></td>
+                        <td><a href="" class="suppr"><i class="fa-solid fa-trash"></i></a></td>
+                    </tr>
+                <?php } ?>
             </tbody>
         </table>
 

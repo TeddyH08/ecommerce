@@ -2,7 +2,7 @@
 
 require 'assets/db/connectdb.php';
 
-$query = "SELECT * FROM utilisateurs WHERE id_utilisateurs = ?";
+$query = "SELECT * FROM articles WHERE id_articles = ?";
 $retour = $db -> prepare($query);
 $retour->execute(array($_GET['id']));
 
