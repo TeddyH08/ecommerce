@@ -1,3 +1,7 @@
+<?php
+    require 'assets/db/crud/users/delu.php';
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -27,10 +31,12 @@
         <div>
             <h3 class="titre_h3">Voulez-vous vraiment supprimer cet utilisateur ?</h2>
 
-            <div class="form_del">
-                <a href="assets/db/crud/users/delu.php" class="oui_non">Oui</a>
-                <a href="Crud" class="oui_non">Non</a>
-            </div>
+            <form class="form_del" action="delete_utilisateur.php" method="post">
+                <input type="hidden" name="id" value="<?php echo $id;?>"/>        
+                    Veux-tu vraiment le supprimer ?
+                <button type="submit" class="oui_non">Oui</button>
+                <a class="oui_non" href="crud.php">Non</a>
+            </form>
         </div>
     </div>
 </body>

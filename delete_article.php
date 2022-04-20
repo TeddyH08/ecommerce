@@ -1,6 +1,7 @@
 <?php
     require 'assets/db/crud/articles/dela.php';
 ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -30,11 +31,11 @@
         <div>
             <h3 class="titre_h3">Voulez-vous vraiment supprimer cet article ?</h2>
 
-            <form class="supprime" action="delete_article.php" method="post">
+            <form class="form_del" action="delete_article.php" method="post">
                 <input type="hidden" name="id" value="<?php echo $id;?>"/>        
                     Veux-tu vraiment le supprimer ?
-                <button type="submit" class="oui">Oui</button>
-                <a class="non" href="crud.php">Non</a>
+                <button type="submit" class="oui_non">Oui</button>
+                <a class="oui_non" href="crud.php">Non</a>
             </form>
         </div>
     </div>

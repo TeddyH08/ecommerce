@@ -1414,7 +1414,7 @@ td {
     justify-content: space-around;
     align-items: center;
     margin: 0;
-    width: 40%;
+    width: 60%;
     margin: auto;
     font-size: 150%;
 }
@@ -1423,7 +1423,7 @@ td {
     background-color: black;
     color: white;
     padding: 5px 15px;
-    font-size: 150%;
+    font-size: 120%;
     border-radius: 5px;
 }
 

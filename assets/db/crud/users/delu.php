@@ -12,7 +12,7 @@ if(!empty($_POST)){
     $retour = $db -> prepare($query);
     $retour->execute(array($id));
 
-    header("Location: admin.php");
+    header("Location: crud.php");
 }
 
 ?>
