@@ -53,7 +53,7 @@
                 </div>
             </div>
 
-            <a href="crud.php">Retour</a>
+            <a href="crud.php" class="retour">Retour</a>
         </div>
     </div>
 </body>

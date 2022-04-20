@@ -99,13 +99,13 @@
                         <td><?php echo $value['id_categories']; ?></td>
                         <td><?php echo $value['id_sous_categories']; ?></td>
                         <td><a href="edit_article.php?id=<?php echo $value['id_articles']; ?>" class="lire"><i class="fa-brands fa-readme"></i></a></td>
-                        <td><a href="" class="up"><i class="fa-solid fa-pencil"></i></a></td>
-                        <td><a href="" class="suppr"><i class="fa-solid fa-trash"></i></a></td>
+                        <td><a href="up_article.php?id=<?php echo $value['id_articles']; ?>" class="up"><i class="fa-solid fa-pencil"></i></a></td>
+                        <td><a href="delete_article.php?id=<?php echo $value['id_articles']; ?>" class="suppr"><i class="fa-solid fa-trash"></i></a></td>
                     </tr>
                 <?php } ?>
             </tbody>
         </table>
 
-        <a href="Accueil">Retour</a> 
+        <a href="Accueil" class="retour">Retour</a> 
     </div> 
 </div>

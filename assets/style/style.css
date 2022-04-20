@@ -1308,7 +1308,7 @@ select {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    width: 90%;
+    width: 98%;
 }
 
 .title_h2, .titre_h2 {
@@ -1401,7 +1401,39 @@ td {
 .form_crud input {
     margin-bottom: 10px;
     width: 50%;
-    font-size: 135%;
+    font-size: 115%;
+}
+
+.titre_h3 {
+    font-family: 'Poppins';
+}
+
+.form_del {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+    width: 40%;
+    margin: auto;
+    font-size: 150%;
+}
+
+.oui_non {
+    background-color: black;
+    color: white;
+    padding: 5px 15px;
+    font-size: 150%;
+    border-radius: 5px;
+}
+
+.retour {
+    background-color: gray;
+    color: white;
+    font-size: 130%;
+    padding: 5px 15px;
+    border-radius: 3px;
+    margin-bottom: 50px;
 }
 
 /* Responsive */

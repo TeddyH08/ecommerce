@@ -27,7 +27,7 @@
         <div class="ajout">
             <h2 class="titre_h2">Ajout d'un article</h2>
 
-            <form action="assets/db/crud/users/adda.php" method="post" class="form_crud">
+            <form action="assets/db/crud/articles/adda.php" method="post" class="form_crud">
                 <label for="nom">Nom :</label>
                 <input type="text" name="nom">
 
@@ -45,20 +45,20 @@
 
                 <label for="categorie">Catégorie :</label>
                 <select name="categorie">
-                    <option value="homme">1</option>
-                    <option value="femme">2</option>
+                    <option value="1">Homme</option>
+                    <option value="2">Femme</option>
                 </select>
 
                 <label for="s_categorie">Sous catégorie :</label>
                 <select name="s_categorie">
-                    <option value="hauts">1</option>
-                    <option value="pantalons">2</option>
+                    <option value="1">Hauts</option>
+                    <option value="2">Pantalons</option>
                 </select>
 
                 <input type="submit" class="sub" value="Ajouter">
             </form>
 
-            <a href="crud.php">Retour</a>
+            <a href="crud.php" class="retour">Retour</a>
         </div>
 
     </div>
