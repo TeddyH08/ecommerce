@@ -1345,7 +1345,7 @@ td {
 }
 
 .up {
-    background-color: rgb(255, 213, 0);
+    background-color: rgb(255, 196, 0);
     color: black;
     padding: 5px 15px;
     margin: 5px 0;
@@ -1353,7 +1353,7 @@ td {
 }
 
 .suppr {
-    background-color: red;
+    background-color: rgb(228, 27, 27);
     color: white;
     padding: 5px 15px;
     margin: 5px 0;
