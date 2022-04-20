@@ -1427,6 +1427,14 @@ td {
     border-radius: 5px;
 }
 
+.modif {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+}
+
 .retour {
     background-color: gray;
     color: white;
