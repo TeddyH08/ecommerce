@@ -4,5 +4,6 @@ RewriteBase "/ecommerce/"
 RewriteRule ^Accueil$ index.php
 RewriteRule ^Inscription$ inscription.php
 RewriteRule ^Connexion$ connexion.php
+RewriteRule ^Deconnexion$ deconnexion.php
 RewriteRule ^verifm$ verificationmail.php
 RewriteRule ^changement$ changementmdp.php

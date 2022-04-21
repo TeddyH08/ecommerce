@@ -1,18 +1,45 @@
 <header>
     <div class="top">
         <div class="reseaux">
-          crud
+            <?php 
+            if(isset($_SESSION['role']) == 2 ){
+                echo '<a href="crud.php" class="users">crud</a>';
+            } 
+            
+            ?>
         </div>
-
+            
         <div class="blank">
-            client
+        <?php 
+        
+            if(isset($_SESSION['role']) >= 0 ){
+                echo "<p class='users'> ".$_SESSION['prenom']." ".$_SESSION['nom']."</p>";
+            } 
+            
+            ?>
+            
         </div>
-        <div class="user">
-            <ul>
-                <a href="Inscription"><li class="users">S'inscrire</li></a>
-                <a href="Connexion"><li class="users">S'identifier</li></a>
-            </ul>
-        </div>
+            <?php 
+
+            if(isset($_SESSION['role']) > 0 ){
+            ?>  <div class="user">
+                <ul>
+                    <a href="deconnexion"><li class="users">Déconnexion</li></a>
+                </ul>
+            </div>
+            <?php
+            }else { ?>
+            <div class="user">
+                <ul>
+                    <a href="Inscription"><li class="users">S'inscrire</li></a>
+                    <a href="Connexion"><li class="users">S'identifier</li></a>
+                </ul>
+            </div>
+                <?php  
+            }
+            
+            ?>
+
     </div>
 
 <nav class="navbar">
