@@ -52,7 +52,8 @@ if(isset( $_POST['mail']) && isset( $_POST['mdp']) && isset( $_POST['prenom'])&&
       </head>
       <body>
       <H1>Felicitations voici l'étape final</H1>
-      <p><a href='https://yanis.simplon-charleville.fr/ecommerce/assets/include/activation.php?C=$token'> cliquer ici </a></p>
+      <p> Bonjour $nom</p>
+      <p><a href='https://yanis.simplon-charleville.fr/ecommerce/assets/includes/activation.php?C=$token'> cliquer ici </a></p>
       </body>
     </html>
     ";
@@ -60,10 +61,10 @@ if(isset( $_POST['mail']) && isset( $_POST['mdp']) && isset( $_POST['prenom'])&&
     // Pour envoyer un mail HTML, l'en-tête Content-type doit être défini
     $headers[] = 'MIME-Version: 1.0';
     $headers[] = 'Content-type: text/html; charset=iso-8859-1';
-    $headers[] = 'From: "Metropolis Simplon" <yanis.pirlet@gmail.com> ';
+    $headers[] = 'From: "Ecommerce test" <yanis.pirlet@gmail.com> ';
     // En-têtes additionnels
   
-    // mail($to, $subject, $message, implode("\r\n", $headers));
+    mail($to, $subject, $message, implode("\r\n", $headers));
   
 
     $mdp = password_hash( $mdp, PASSWORD_DEFAULT);

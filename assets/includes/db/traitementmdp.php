@@ -1,20 +1,23 @@
 <?php
-    include ('connexionbdd.php');
-
-  if(isset($_GET['reset'])){ 
-      $token=$_GET['reset']; 
-            if(isset( $_POST['mdp'])){
-                $mdp =  htmlspecialchars($_POST['mdp']);
+    include ('../connexionbdd.php');
+    
+    if(isset($_GET['reset'])){ 
+        $token=$_GET['reset']; 
+        if(isset( $_POST['mdp'])){
+            $mdp =  htmlspecialchars($_POST['mdp']);
                 $mdp = password_hash( $mdp, PASSWORD_DEFAULT);
 
-                $sql = "UPDATE utilisateurs SET password_utilisateurs= :mdp_users WHERE  tokenmdp_users = :tokenmdp_users";
+                $sql = "UPDATE utilisateurs SET password_utilisateurs= :mdp_users WHERE token_mdp_utilisateurs = :tokenmdp_users";
                         $prepare = $db->prepare($sql);   
                         $prepare ->execute(array(':mdp_users' => $mdp,
                             ':tokenmdp_users' => $token));    
                 
                     
-                
-                    //genere le token.
+                $rech = "SELECT * FROM utilisateurs WHERE token_mdp_utilisateurs = :tokenmdp_users";
+                $prepare1 = $db->prepare($rech);
+                $prepare1 ->execute(array(':tokenmdp_users' => $token));
+                $result = $prepare1->fetch();
+                //genere le token.
                     $now = new \DateTime('now');
                     $token = openssl_random_pseudo_bytes(26) . bin2hex($now->format('Y-m-d H:i:s'));
                     // $token = openssl_random_pseudo_bytes(26);
@@ -23,8 +26,7 @@
                     $token = bin2hex($token);
                             
                     // Plusieurs destinataires
-                    $to  = 'yayap08@gmail.com'; // notez la virgule
-                
+                    $to  = $result['mail_utilisateurs']; // notez la virgule
                     // Sujet
                     $subject = 'Metropolis etape de validation ';
                 
@@ -42,7 +44,7 @@
                         <p>Inspect it using the tabs you see above and learn how this email can be improved.</p>
                         <img alt="Inspect with Tabs" src="assets\img\logo prope.jpg" style="width: 100%;">
                         <p>Now send your email using our fake SMTP server and integration of your choice!</p>
-                        <p>Good luck! Hope it works.</p>  <p><a href="http://localhost/Metropolis/connecter.php"> Connectez vous </a></p>
+                        <p>Good luck! Hope it works.</p>  <p><a href="https://yanis.simplon-charleville.fr/ecommerce/Connexion"> Connectez vous </a></p>
                         </div>
                         <!-- Example of invalid for email html/css, will be detected by Mailtrap: -->
                         <style>
@@ -61,6 +63,6 @@
                     // En-têtes additionnels
                 
                     mail($to, $subject, $message, implode("\r\n", $headers));
-                    header('location:../../changementmdp.php?id=envoimail');
+                    header('location:../../../changementmdp.php?id=envoimail');
                 }
             }

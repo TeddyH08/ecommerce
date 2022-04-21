@@ -1,5 +1,5 @@
 <?php  
-    include "connexionbdd.php";
+    include "../connexionbdd.php";
 
     $vieToken = 60; // Validité du token en minutes
 
@@ -18,9 +18,9 @@
             // die(var_dump($interval->format('%i')));
 
             if($interval > $vieToken){
-                header("Location:../../connexion.php?id=tokeninvalide");
+                header("Location:../../..connexion.php?id=tokeninvalide");
             }else{ 
-                header("Location:../../changementmdp.php?reset=$token");
+                header("Location:../../../changementmdp.php?reset=$token");
             }
 
         }

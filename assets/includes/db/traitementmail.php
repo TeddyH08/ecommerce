@@ -35,7 +35,7 @@
       </head>
       <body>
       <H1>Voici l\' étape pour réinitialiser votre Mot de passe</H1>
-      <p><a href='https://yanis.simplon-charleville.fr/ecommerce/assets/include/db/traitementtoken.php?reset=$token'> cliquer ici </a></p>
+      <p><a href='https://yanis.simplon-charleville.fr/ecommerce/assets/includes/db/traitementtoken.php?reset=$token'> cliquer ici </a></p>
       </body>
       </html>
       ";

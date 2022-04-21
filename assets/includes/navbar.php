@@ -1,12 +1,12 @@
 <header>
     <div class="top">
         <div class="reseaux">
-          
+          crud
         </div>
 
         <div class="blank">
+            client
         </div>
-
         <div class="user">
             <ul>
                 <a href="Inscription"><li class="users">S'inscrire</li></a>
