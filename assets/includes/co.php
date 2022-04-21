@@ -3,7 +3,7 @@
         <h3>Connexion :</h3>
 
         <form action="">
-            <label for="" class="titr_la">Pseudo ou adresse mail :</label>
+            <label for="" class="titr_la">Adresse mail :</label>
             <input type="text" class="titr_in">
 
             <label for="" class="titr_la">Mot de passe :</label>
