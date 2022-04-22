@@ -2,16 +2,16 @@
     <div class="inscription">
         <h3>Inscription :</h3>
 
-        <form method="post" action="assets/includes/db/traitementins.php">
+        <form action="">
             <div class="model_un">
                 <div class="nom">
                     <label for="">Nom :</label>
-                    <input type="text" name="nom">
+                    <input type="text">
                 </div>
 
                 <div class="prenom">
                     <label for="">Prénom :</label>
-                    <input type="text" name="prenom">
+                    <input type="text">
                 </div>
             </div>
 
@@ -29,43 +29,43 @@
 
             <div class="model_deux">
                 <label for="">Date de naissance :</label>
-                <input type="date" name="daten">
+                <input type="date">
             </div>
 
             <div class="model_deux">
                 <label for="">Adresse mail :</label>
-                <input type="text" name="mail">
+                <input type="text">
             </div>
 
             <div class="model_deux">
                 <label for="">Mot de passe :</label>
-                <input type="text"name="mdp">
+                <input type="text">
             </div>
 
             <div class="model_deux">
                 <label for="">Confirmation du mot de passe :</label>
-                <input type="text" name="mdp2">
+                <input type="text">
             </div>
 
             <div class="model_deux">
                 <label for="">Pays :</label>
-                <input type="text" name="pays">
+                <input type="text">
             </div>
 
             <div class="model_deux">
                 <label for="">Adresse :</label>
-                <input type="text" name="rue">
+                <input type="text">
             </div>
 
             <div class="model_un">
                 <div class="nom">
                     <label for="">Code postal :</label>
-                    <input type="text" name="cp">
+                    <input type="text">
                 </div>
 
                 <div class="prenom">
                     <label for="">Ville :</label>
-                    <input type="text" name="ville">
+                    <input type="text">
                 </div>
             </div>
 
