@@ -2,7 +2,7 @@
     <div class="top">
         <div class="reseaux">
             <?php 
-            if(isset($_SESSION['role']) == 2 ){
+            if(isset($_SESSION['role']) != 1 ){
                 echo '<a href="crud.php" class="users">crud</a>';
             } 
             
