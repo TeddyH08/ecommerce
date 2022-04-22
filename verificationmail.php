@@ -1,7 +1,3 @@
-<?php 
-  session_start();
-
-?> 
 <!DOCTYPE html>
 
 <html lang="fr">
@@ -11,8 +7,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link rel="shortcut icon" href="assets/img/icon/icon.png">
-
-        <title>E-Commerce</title>
+        
+        <title>Verification du mail</title>
 
         <link rel="stylesheet" href="assets/style/style.css">
         <link 
@@ -29,7 +25,7 @@
 
     <body>
         <?php include "assets/includes/navbar.php"; ?>
-        <?php include "assets/includes/accueil.php"; ?>
+        <?php include "assets/includes/mail.php"; ?>
         <?php include "assets/includes/footer.php"; ?>
     </body>
 </html>
