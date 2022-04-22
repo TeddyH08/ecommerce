@@ -2,7 +2,7 @@
     <div class="top">
         <div class="reseaux">
             <?php 
-            if(isset($_SESSION['role']) != 1 ){
+            if(isset($_SESSION['role']) >= 2 ){
                 echo '<a href="Crud" class="users">Crud</a>';
             } 
             
@@ -12,7 +12,7 @@
         <div class="blank">
         <?php 
         
-            if(isset($_SESSION['role']) >= 0 ){
+            if(isset($_SESSION['role']) > 0 ){
                 echo "<p class='users'> ".$_SESSION['prenom']." ".$_SESSION['nom']."</p>";
             } 
             
