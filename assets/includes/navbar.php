@@ -3,7 +3,7 @@
         <div class="reseaux">
             <?php 
             if(isset($_SESSION['role']) != 1 ){
-                echo '<a href="crud.php" class="users">crud</a>';
+                echo '<a href="Crud" class="users">Crud</a>';
             } 
             
             ?>
@@ -252,9 +252,9 @@
                     <input type="text" class="search-bar">
                     <a href="" class="search-button"><i class="fa-solid fa-magnifying-glass"></i></a>
                 </div>
-                <a href="" class="fav"><i class="fa-solid fa-heart"></i></a>
-                <a href="" class="shop"><i class="fa-solid fa-bag-shopping"></i></a>
-                <a href="" class="acc"><i class="fa-solid fa-user"></i></a>
+                <a href="Favoris" class="fav"><i class="fa-solid fa-heart"></i></a>
+                <a href="Panier" class="shop"><i class="fa-solid fa-bag-shopping"></i></a>
+                <a href="Profil" class="acc"><i class="fa-solid fa-user"></i></a>
             </div>
         </div>
 
