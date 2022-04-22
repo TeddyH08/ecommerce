@@ -1,5 +1,5 @@
 <?php
-    include ('../connexionbdd.php');
+       include '../../db/connectdb.php';
     
     if(isset($_GET['reset'])){ 
         $token=$_GET['reset']; 
