@@ -904,6 +904,10 @@ h1{
     color: lime;
 }
 
+.error {
+    color: red;
+}
+
 h3 {
     font-size: 250%;
     margin: 15px 0;

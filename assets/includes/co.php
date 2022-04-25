@@ -1,11 +1,13 @@
 <div class="container">
     <div class="connexion">
         <h3>Connexion :</h3>
-        <?php if (isset($_GET['id'])){ ?>
+        <?php if (isset($_GET['succesinscrit'])){ ?>
             <p class="sucess">Vous êtes bien inscrit, vous pouvez maintenant vous connecter !</p>
         <?php } ?>
 
-        <form method="post" action="assets/includes/db/traitementco.php">
+        <p class="error"></p>
+
+        <form method="post" action="assets/includes/db/traitementco.php" id ="formajax">
             <label for="" class="titr_la">Adresse mail :</label>
             <input type="text" name="mail" class="titr_in">
 
