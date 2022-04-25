@@ -900,6 +900,10 @@ h1{
     margin-bottom: 100px;
 }
 
+.succesinscrit {
+    color: lime;
+}
+
 h3 {
     font-size: 250%;
     margin: 15px 0;
