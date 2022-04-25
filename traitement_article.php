@@ -1,7 +1,7 @@
 
 <?php 
 
-require_once 'assets/includes/bddconnexion.php';
+require_once 'assets/db/connectdb.php';
 
 // echo "taillle : ";
 // echo $_POST["tailles"];

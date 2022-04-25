@@ -1,4 +1,7 @@
 <?php
+
+session_start(); 
+
     require 'assets/db/crud/users/lireu.php';
 ?>
 
