@@ -1,5 +1,7 @@
 <?php
 
+session_start(); 
+
 require "assets/db/connectdb.php"
 
 ?>

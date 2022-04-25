@@ -1,6 +1,8 @@
 <?php
     require 'assets/db/connectdb.php';
-
+    
+    session_start(); 
+    
     $stmt = $db->prepare('SELECT * FROM utilisateurs WHERE id_utilisateurs = ?');
     $stmt->execute(array($_GET['id']));
     $contact = $stmt->fetch(PDO::FETCH_ASSOC);
