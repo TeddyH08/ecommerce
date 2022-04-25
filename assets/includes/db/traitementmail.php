@@ -1,7 +1,6 @@
 <?php 
 
-
-  include ('../connexionbdd.php');
+       include '../../db/connectdb.php';
 
 
 

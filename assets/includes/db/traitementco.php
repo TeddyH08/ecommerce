@@ -1,5 +1,5 @@
 <?php
-       include '../connexionbdd.php';
+       include '../../db/connectdb.php';
        
        if(isset( $_POST['mail']) && isset( $_POST['mdp'])){
            $mail = htmlspecialchars($_POST['mail']); 

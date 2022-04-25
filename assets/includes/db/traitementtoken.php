@@ -1,5 +1,5 @@
 <?php  
-    include "../connexionbdd.php";
+       include '../../db/connectdb.php';
 
     $vieToken = 60; // Validité du token en minutes
 
