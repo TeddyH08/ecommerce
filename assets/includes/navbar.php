@@ -3,7 +3,7 @@
         <div class="reseaux">
             <?php 
             if(isset($_SESSION['role']) >= 2 ){
-                echo '<a href="Crud" class="users">Crud</a>';
+                echo '<a href="crud" class="users">Crud</a>';
             } 
             
             ?>
@@ -31,8 +31,8 @@
             }else { ?>
             <div class="user">
                 <ul>
-                    <a href="Inscription"><li class="users">S'inscrire</li></a>
-                    <a href="Connexion"><li class="users">S'identifier</li></a>
+                    <a href="inscription"><li class="users">S'inscrire</li></a>
+                    <a href="connexion"><li class="users">S'identifier</li></a>
                 </ul>
             </div>
                 <?php  
@@ -44,7 +44,7 @@
 
 <nav class="navbar">
         <div class="logo">
-                <a href="Accueil"><img src="assets/img/logo.jpg" class="log"></a>
+                <a href="accueil"><img src="assets/img/logo.jpg" class="log"></a>
         </div>
 
         <div id="nav" class="respon">
@@ -252,9 +252,9 @@
                     <input type="text" class="search-bar">
                     <a href="" class="search-button"><i class="fa-solid fa-magnifying-glass"></i></a>
                 </div>
-                <a href="Favoris" class="fav"><i class="fa-solid fa-heart"></i></a>
-                <a href="Panier" class="shop"><i class="fa-solid fa-bag-shopping"></i></a>
-                <a href="Profil" class="acc"><i class="fa-solid fa-user"></i></a>
+                <a href="favoris" class="fav"><i class="fa-solid fa-heart"></i></a>
+                <a href="panier" class="shop"><i class="fa-solid fa-bag-shopping"></i></a>
+                <a href="profil" class="acc"><i class="fa-solid fa-user"></i></a>
             </div>
         </div>
 

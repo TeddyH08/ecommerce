@@ -8,10 +8,10 @@
         <p class="error"></p>
 
         <form method="post" action="assets/includes/db/traitementco.php" id ="formajax">
-            <label for="" class="titr_la">Adresse mail :</label>
+            <label for="mail" class="titr_la">Adresse mail :</label>
             <input type="text" name="mail" class="titr_in">
 
-            <label for="" class="titr_la">Mot de passe :</label>
+            <label for="mdp" class="titr_la">Mot de passe :</label>
             <input type="text" name="mdp" class="titr_in">
 
             <div class="aide">
