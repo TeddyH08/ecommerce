@@ -1,8 +1,7 @@
 <div class="container">
     <div class="connexion">
         <h3>Connexion :</h3>
-
-        <?php if (isset($_GET['succesinscrit'])){ ?>
+        <?php if (isset($_GET['id'])){ ?>
             <p class="sucess">Vous êtes bien inscrit, vous pouvez maintenant vous connecter !</p>
         <?php } ?>
 

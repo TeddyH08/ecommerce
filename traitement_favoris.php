@@ -1,6 +1,6 @@
 <?php
 
-require_once 'assets/includes/bddconnexion.php';
+require_once 'assets/db/connectdb.php';
 
 $id_login = 2;
 

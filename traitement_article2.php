@@ -1,6 +1,6 @@
 <?php
 
-require_once 'assets/includes/bddconnexion.php';
+require_once 'assets/db/connectdb.php';
 
 // $sqlcouleur = "SELECT * FROM stocks s, couleurs c, tailles t 
 // WHERE s.id_couleurs=c.id_couleurs 
