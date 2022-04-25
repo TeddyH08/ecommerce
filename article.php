@@ -1,8 +1,7 @@
-<?php 
+<?php
+session_start();
 
 require_once 'assets/includes/bddconnexion.php';
-
-$id_login = 2;
 
 ?>
 <!DOCTYPE html>
