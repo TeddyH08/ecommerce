@@ -5,5 +5,9 @@ RewriteRule ^Accueil$ index.php
 RewriteRule ^Inscription$ inscription.php
 RewriteRule ^Connexion$ connexion.php
 RewriteRule ^Deconnexion$ deconnexion.php
-RewriteRule ^verifm$ verificationmail.php
-RewriteRule ^changement$ changementmdp.php
+RewriteRule ^Verifm$ verificationmail.php
+RewriteRule ^Changement$ changementmdp.php
+RewriteRule ^Favoris$ favoris.php
+RewriteRule ^Panier$ panier.php
+RewriteRule ^Profil$ profil.php
+RewriteRule ^Crud$ crud.php
