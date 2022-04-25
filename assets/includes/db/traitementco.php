@@ -32,7 +32,7 @@
                         header("Location:../../../connexion.php?id=erexistpas");
                     }
                 }else{
-                    echo "Votre adresse mail ou Mot de passe est incorrect !"
+                    echo "Votre adresse mail ou Mot de passe est incorrect !";
                     
         }
 
