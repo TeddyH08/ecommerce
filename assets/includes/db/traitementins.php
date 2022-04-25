@@ -73,7 +73,7 @@ if(isset( $_POST['mail']) && isset( $_POST['mdp']) && isset( $_POST['prenom'])&&
     $prepare = $db->prepare($sql);   
     $prepare ->execute(array(':prenom_utilisateurs'=>$prenom, ':nom_utilisateurs' =>$nom, ':password_utilisateurs' => $mdp, ':mail_utilisateurs' => $mail, ':datenaissance_utilisateurs'=> $daten, ':rue_utilisateurs' => $rue, ':ville_utilisateurs' => $ville, ':cp_utilisateurs' => $cp, ':pays_utilisateurs' => $pays, ':token_utilisateurs' => $token, ':id_roles' => '1', ':activation_utilisateurs' => '0' ));
 
-        header("Location: ../../../connexion.php?id=succesinscrit");
+        header("Location: ../../../connexion.php?succesinscrit");
   }
 } else {
   header("location: ../../../inscription.php?id=erreurm");
