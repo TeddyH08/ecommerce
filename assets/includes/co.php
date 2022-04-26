@@ -17,10 +17,10 @@
 
         <form method="post" action="assets/includes/db/traitementco.php" id="formajax">
             <label for="mail" class="titr_la">Adresse mail :</label>
-            <input type="text" name="mail" class="titr_in">
+            <input type="text" name="mail" class="titr_in" required>
 
             <label for="mdp" class="titr_la">Mot de passe :</label>
-            <input type="text" name="mdp" class="titr_in">
+            <input type="text" name="mdp" class="titr_in" required>
 
             <div class="aide">
                 <div class="check"><input type="checkbox" class="checkbox"><label for="">Se souvenir de moi</label></div>

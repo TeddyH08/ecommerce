@@ -28,7 +28,7 @@
                             echo "Votre adresse mail ou mot de passe est incorrect !";
                         }
                     } else {
-                        echo "Vous n'avez pas de compte enregistrer !";
+                        echo "Votre adresse mail ou mot de passe est incorrect !";
                     }
             }else{
                 echo "Vous n'avez pas rempli tout les champs !";
