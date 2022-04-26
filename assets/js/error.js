@@ -9,6 +9,10 @@ $("#formajax").submit(function (e) {
       type: form_method,
       data: form_data,
     }).done(function (response) {
+      if (response.includes("<!DOCTYPE html>")){
+         document.location.href="index.php"; 
+      } else {
         $(".error").html(response);
+      }
     });
   });
