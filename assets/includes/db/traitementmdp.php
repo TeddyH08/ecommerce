@@ -3,7 +3,8 @@
     
     if(isset($_GET['reset'])){ 
         $token=$_GET['reset']; 
-        if(isset( $_POST['mdp'])){
+        if(isset( $_POST)){
+            if (!empty($_POST['mdp'])) {
             $mdp =  htmlspecialchars($_POST['mdp']);
                 $mdp = password_hash( $mdp, PASSWORD_DEFAULT);
 
@@ -64,5 +65,8 @@
                 
                     mail($to, $subject, $message, implode("\r\n", $headers));
                     header('location:../../../connexion?chgmtmdp');
-                }
+            } else {
+                echo "Veuillez remplir les champs";
             }
+        }
+    }
