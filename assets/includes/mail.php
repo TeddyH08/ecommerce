@@ -2,7 +2,9 @@
     <div class="connexion">
         <h3>Verification du mail :</h3>
 
-        <form  method="post" action="assets/includes/db/traitementmail.php">
+        <div class="error"></div>
+
+        <form  method="post" action="assets/includes/db/traitementmail.php" id ="formajax">
             <label for="" class="titr_la">E-mail de récuperation de mot de passe :</label>
             <input type="text" name="mail" class="titr_in">
 

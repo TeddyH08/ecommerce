@@ -1,6 +1,8 @@
 <div class="container">
     <div class="connexion">
         <h3>Changement de Mot de Passe :</h3>
+
+        <div class="error"></div>
     
         <form method="post" action="assets/includes/db/traitementmdp.php?reset=<?php echo $_GET["reset"]; ?>">
         <label for="" class="titr_la">Mot de passe :</label>
