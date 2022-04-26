@@ -5,6 +5,14 @@
             <p class="sucess">Vous êtes bien inscrit, vous pouvez maintenant vous connecter !</p>
         <?php } ?>
 
+        <?php if (isset($_GET['demm'])){ ?>
+            <p class="sucess">Un mail vous à été envoyer !</p>
+        <?php } ?>
+
+        <?php if (isset($_GET['chgmtmdp'])){ ?>
+            <p class="sucess">Votre mot de passe a bien été changer</p>
+        <?php } ?>
+
         <div class="error"></div>
 
         <form method="post" action="assets/includes/db/traitementco.php" id ="formajax">
@@ -28,24 +36,3 @@
         </div>
     </div>
 </div>
-<?php 
-  if(isset($_GET['id'])){
-            switch ($_GET['id']){
-                case "ermailmdp":
-                    echo "<p class='messageerreur'> Connexion impossible :<br> Email ou Mot de passe oublié</p>";
-                    break;
-                    case "erexistpas":
-                      echo "<p style='color: white; justify-content: center'> Vous etes pas inscrit ou vous n'etes pas valider </p>";
-                      break;
-                      case "ncompris":
-                          echo "<p style='color: white'> Erreur est le contenu </p>";
-                          break;
-                          case "demm":
-                            echo "<p class='messageerreur'>Votre demande de reinitiation de votre mot de passe est bien prit en compte </p>";
-                            break;
-                            case "erchangmdp":
-                              echo "<p class='messageerreur'>Votre demande de reinitiation de votre mot de passe à expirer</p>";
-                              break;
-                }
-        }
-        ?> 	 

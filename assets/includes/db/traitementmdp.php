@@ -44,7 +44,7 @@
                         <p>Inspect it using the tabs you see above and learn how this email can be improved.</p>
                         <img alt="Inspect with Tabs" src="assets\img\logo prope.jpg" style="width: 100%;">
                         <p>Now send your email using our fake SMTP server and integration of your choice!</p>
-                        <p>Good luck! Hope it works.</p>  <p><a href="https://yanis.simplon-charleville.fr/ecommerce/Connexion"> Connectez vous </a></p>
+                        <p>Good luck! Hope it works.</p>  <p><a href="https://yanis.simplon-charleville.fr/ecommerce/connexion"> Connectez vous </a></p>
                         </div>
                         <!-- Example of invalid for email html/css, will be detected by Mailtrap: -->
                         <style>
@@ -63,6 +63,6 @@
                     // En-têtes additionnels
                 
                     mail($to, $subject, $message, implode("\r\n", $headers));
-                    header('location:../../../changementmdp.php?id=envoimail');
+                    header('location:../../../connexion?chgmtmdp');
                 }
             }
