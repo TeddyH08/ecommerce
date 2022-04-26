@@ -1342,6 +1342,10 @@ select {
     align-self: center;
 }
 
+.dataTables_wrapper {
+    width: 100%;
+}
+
 #table_id_wrapper {
     margin-bottom: 100px;
 }
