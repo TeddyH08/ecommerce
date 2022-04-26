@@ -4,7 +4,7 @@
 
         <div class="error"></div>
     
-        <form method="post" action="assets/includes/db/traitementmdp.php?reset=<?php echo $_GET["reset"]; ?>">
+        <form method="post" action="assets/includes/db/traitementmdp.php?reset=<?php echo $_GET["reset"]; ?>"  id ="formajax">
         <label for="" class="titr_la">Mot de passe :</label>
             <input type="text" name="mdp" class="titr_in">
 
