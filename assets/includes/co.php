@@ -5,7 +5,7 @@
             <p class="sucess">Vous êtes bien inscrit, vous pouvez maintenant vous connecter !</p>
         <?php } ?>
 
-        <p class="error"></p>
+        <div class="error"></div>
 
         <form method="post" action="assets/includes/db/traitementco.php" id ="formajax">
             <label for="mail" class="titr_la">Adresse mail :</label>

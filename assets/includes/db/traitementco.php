@@ -1,7 +1,8 @@
 <?php
        include '../../db/connectdb.php';
        
-       if(isset( $_POST['mail']) && isset( $_POST['mdp'])){
+       if(isset($_POST)){
+           if (!empty($_POST["mail"]) && !empty($_POST["mdp"])){
            $mail = htmlspecialchars($_POST['mail']); 
            $mdp = htmlspecialchars($_POST['mdp']);
            
@@ -24,16 +25,14 @@
                             header("Location:../../../index.php");
                             
                         } else {
-                            header("Location:../../../connexion.php?id=ermailmdp");
+                            echo "Erreur 1";
                         }
                     } else {
-                      
-                        session_destroy(); 
-                        header("Location:../../../connexion.php?id=erexistpas");
+                        echo "Votre adresse mail ou mot de passe est incorrect !";
                     }
-                }else{
-                    header("Location:../../../connexion.php?id=ncompris");
-                    
+            }else{
+                echo "Vous n'avez pas rempli tout les champs !";
+            }
         }
 
 ?>
