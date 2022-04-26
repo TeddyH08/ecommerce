@@ -15,7 +15,7 @@
 
         <div class="error"></div>
 
-        <form method="post" action="assets/includes/db/traitementco.php" id ="formajax">
+        <form method="post" action="assets/includes/db/traitementco.php" id="formajax">
             <label for="mail" class="titr_la">Adresse mail :</label>
             <input type="text" name="mail" class="titr_in">
 

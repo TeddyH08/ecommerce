@@ -977,10 +977,25 @@ form {
     width: 90%;
 }
 
+.titr_lac {
+    font-size: 130%;
+    margin: 5px 15px;
+    width: 50%;
+}
+
+
 .titr_in {
     font-size: 130%;
     margin: 3px 15px;
     width: 90%;
+    border: 1px black solid;
+    border-radius: 5px;
+}
+
+.titr_inc {
+    font-size: 130%;
+    margin: 3px 15px;
+    width: 50%;
     border: 1px black solid;
     border-radius: 5px;
 }
@@ -1473,6 +1488,7 @@ td {
     padding: 5px 15px;
     border-radius: 3px;
     margin-bottom: 50px;
+    margin-top: 20px;
 }
 
 /* Responsive */
