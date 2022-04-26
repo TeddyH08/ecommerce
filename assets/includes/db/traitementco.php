@@ -25,10 +25,10 @@
                             header("Location:../../../index.php");
                             
                         } else {
-                            echo "Erreur 1";
+                            echo "Votre adresse mail ou mot de passe est incorrect !";
                         }
                     } else {
-                        echo "Votre adresse mail ou mot de passe est incorrect !";
+                        echo "Vous n'avez pas de compte enregistrer !";
                     }
             }else{
                 echo "Vous n'avez pas rempli tout les champs !";
