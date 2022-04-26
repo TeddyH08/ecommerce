@@ -13,11 +13,10 @@
         <?php 
         
             if(isset($_SESSION['role']) > 0 ){
-                echo "<p class='users'> ".$_SESSION['prenom']." ".$_SESSION['nom']."</p>";
+                echo "<p class='users'>Bienvenu ".$_SESSION['prenom']." ".$_SESSION['nom']."</p>";
             } 
             
             ?>
-            
         </div>
             <?php 
 

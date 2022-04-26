@@ -93,8 +93,18 @@ header {
     text-decoration: none;
 }
 
+.reseaux {
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .blank {
     width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .logo {
