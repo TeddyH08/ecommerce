@@ -131,6 +131,15 @@ header {
     margin: 0 10px;
 }
 
+.userss {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 500ms ease;
+    margin: 0 10px;
+}
+
 .log {
     width: 100%;
     border-radius: 50%;
