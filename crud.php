@@ -37,7 +37,8 @@ require "assets/db/connectdb.php"
         <?php include "assets/includes/crud.php"; ?>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js" integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
+        <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>*
+        <script src="https://cdn.datatables.net/plug-ins/1.11.5/i18n/fr-FR.json"></script>
         <script src="assets/js/tab.js"></script>
     </body>
 </html>
