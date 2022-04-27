@@ -182,15 +182,27 @@ session_start();
                     </div>
                     <!-- RANGE PRIX -->
                     <div class="card-body">            
+
+                    <?php 
+
+                    // echo "get prix : ";
+                    // echo $_GET['prix3'];
+                            if (empty($_GET['prix3'])){$valeur = "150";}
+                            if (!empty($_GET['prix3'])) {
+                                                               
+                                $valeur = $_GET['prix3'];
+                            
+                            }
+                    ?> 
                     
                         <div class="slidecontainer">
                         <p>Choisis ton prix max</p>
-                            <input type="range" min="1" max="500" value="500" class="slider" id="myRange" style="background-color:#000; height:4px">
+                            <input type="range" name="prix3" min="1" max="150" value="<?php echo $valeur; ?>" class="slider" id="myRange" style="background-color:#000; height:4px; width:200px">
                             <p>Prix: <span id="demo"></span>€ max</p>
                         </div>
                     </div>
 
-                    
+
                 </form>
                 
                 
@@ -211,7 +223,7 @@ session_start();
                                     $branchecked = $_GET['genress'];
                                     foreach($branchecked as $rowbrand)
                                     {
-                                        $products = "SELECT * FROM articles WHERE id_genres IN ($rowbrand)";
+                                        $products = "SELECT * FROM articles WHERE id_genres IN ($rowbrand) AND prix_articles <= ".$_GET['prix3']."";
                                         $products_run = mysqli_query($con, $products);
                                         if(mysqli_num_rows($products_run) > 0)
                                         {
@@ -243,14 +255,14 @@ session_start();
                                 if ((empty($_GET['genress'])) && (isset($_GET['sous_cat2'])))
                                 {
                                     $branchecked = [];
-                                    // $branchecked = $_GET['genress'];
+                                    
                                     $branchecked2 = $_GET['sous_cat2'];
                                     // foreach($branchecked as $rowbrand)
                                     // {
                                         foreach($branchecked2 as $rowbrand2)
                                     {
 
-                                        $products = "SELECT * FROM articles WHERE id_sous_categories IN ($rowbrand2)";
+                                        $products = "SELECT * FROM articles WHERE id_sous_categories IN ($rowbrand2) AND prix_articles <= ".$_GET['prix3']."";
                                         $products_run = mysqli_query($con, $products);
                                         if(mysqli_num_rows($products_run) > 0)
                                         {
@@ -274,7 +286,8 @@ session_start();
                 <?php
                                             endforeach;
                                         }
-                                    // }
+                                        
+                                    
                                 }
                                 }
 
@@ -285,12 +298,14 @@ session_start();
                                     $branchecked = [];
                                     $branchecked = $_GET['genress'];
                                     $branchecked2 = $_GET['sous_cat2'];
+                                    // $branchecked3 = $_GET['prix3'];
                                     foreach($branchecked as $rowbrand)
                                     {
                                         foreach($branchecked2 as $rowbrand2)
                                     {
+                              
 
-                                        $products = "SELECT * FROM articles WHERE id_genres IN ($rowbrand) AND id_sous_categories IN ($rowbrand2)";
+                                        $products = "SELECT * FROM articles WHERE id_genres IN ($rowbrand) AND id_sous_categories IN ($rowbrand2) AND prix_articles <= ".$_GET['prix3']."";
                                         $products_run = mysqli_query($con, $products);
                                         if(mysqli_num_rows($products_run) > 0)
                                         {
@@ -314,12 +329,49 @@ session_start();
                 <?php
                                             endforeach;
                                         }
-                                    }
+                                    
+                                }
                                 }
                                 }
                                 
-                            ?>
+                                if ((empty($_GET['genress'])) && (empty($_GET['sous_cat2'])) && (empty($_GET['genres'])))
+                                {
 
+                                    // $branchecked3 = $_GET['prix3'];
+
+                              
+
+                                        $products = "SELECT * FROM articles WHERE prix_articles <= ".$_GET['prix3']."";
+                                        $products_run = mysqli_query($con, $products);
+                                        if(mysqli_num_rows($products_run) > 0)
+                                        {
+                                            foreach($products_run as $proditems) :
+                                                ?>
+                <div class="test-tb">
+                    <div class="border">
+                        <a href="article.php?id_article=<?= $proditems['id_articles'];?>">
+                            <ul>
+                                <li><img src="assets/img/<?= $proditems['image1_articles']; ?>"></li>
+                                <li>
+                                    <h6><?= $proditems['nom_articles']; ?></h6>
+                                </li>
+                                <li>
+                                    <h6><?= $proditems['prix_articles']; ?>€</h6>
+                                </li>
+                            </ul>
+                        </a>
+                    </div>
+                </div>
+                <?php
+                                            endforeach;
+                                        }
+                              
+                                }
+                            ?>
+                            
+
+
+<!-- CATEGORIE SANS FILTRE -->
                 <?php
             
                     

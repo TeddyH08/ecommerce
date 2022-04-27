@@ -1,3 +1,7 @@
+<?php 
+include("assets/db/connectdb.php");
+
+?>
 <div class="container cat">
     <div class="titre-accueil-h1"><h1>Bienvenue sur Amaplon</h1></div>
 
@@ -16,64 +20,41 @@
         <h3 style="font-variant-caps: all-small-caps;text-align: center;" class="title_h3">Les Nouveautés qui donnent envie ! </h3>
 
         <div class="nouveaute-accueil-tb">
+        <?php
+        $sel = "SELECT * FROM articles WHERE id_categories != 3 ORDER BY id_articles DESC LIMIT 6";
+        $requete = $db ->prepare($sel);
+        $requete ->execute();
+        ?>
+        <?php
+        foreach ($requete as $row){
+        ?>
+        
             <div class="nouveaute-1">
-                <ul>
-                    <li><img src="assets/img/main-banner-desktop-10-03.jpg" alt=""></li>
-                    <li>MARQUE</li>
+            <a href="article.php?id_article=<?php echo $row['id_articles'];?>"><ul>
+                    <li><img src="assets/img/<?php echo $row['image1_articles'];?>" alt=""></li>
+                    <li>                                <?php
+                            echo $row['nom_articles'];
+                            ?></li>
                     <li>COULEUR</li>
-                    <li>PRIX</li>
-                </ul>
+                    <li>                                <?php
+                            echo $row['prix_articles'];
+                            ?>€</li>
+                </ul></a>
             </div>
-            <div class="nouveaute-1">
-                <ul>
-                    <li><img src="assets/img/main-banner-desktop-10-03.jpg" alt=""></li>
-                    <li>MARQUE</li>
-                    <li>COULEUR</li>
-                    <li>PRIX</li>
-                </ul>
-            </div>
-            <div class="nouveaute-1">
-                <ul>
-                    <li><img src="assets/img/main-banner-desktop-10-03.jpg" alt=""></li>
-                    <li>MARQUE</li>
-                    <li>COULEUR</li>
-                    <li>PRIX</li>
-                </ul>
-            </div>
-            <div class="nouveaute-1">
-                <ul>
-                    <li><img src="assets/img/main-banner-desktop-10-03.jpg" alt=""></li>
-                    <li>MARQUE</li>
-                    <li>COULEUR</li>
-                    <li>PRIX</li>
-                </ul>
-            </div>
-            <div class="nouveaute-1">
-                <ul>
-                    <li><img src="assets/img/main-banner-desktop-10-03.jpg" alt=""></li>
-                    <li>MARQUE</li>
-                    <li>COULEUR</li>
-                    <li>PRIX</li>
-                </ul>
-            </div>
-            <div class="nouveaute-1">
-                <ul>
-                    <li><img src="assets/img/main-banner-desktop-10-03.jpg" alt=""></li>
-                    <li>MARQUE</li>
-                    <li>COULEUR</li>
-                    <li>PRIX</li>
-                </ul>
-            </div>
+
+            <?php
+            }
+            ?>
         </div>
 
     <button class="btn-nouveau">Voir toutes les nouveautés</button>
 
     <hr>
-    <h2 style="text-align: center;" class="title_h2">Notre Collection</h2>
+    <h2 style="text-align: center; margin-top:25px; margin-bottom:25px;" class="title_h2">Notre Collection</h2>
     <div class="collection">
-        <div class="collection-box"><a href="https://upside-web.fr"><img src="assets/img/S-03-10.jpg" alt=""></a></div>
-        <div class="collection-box"><a href="https://upside-web.fr"><img src="assets/img/M-03-10.jpg" alt=""></a></div>
-        <div class="collection-box"><a href="https://upside-web.fr"><img src="assets/img/L-03-10.jpg" alt=""></a></div>
+        <div class="collection-box"><a href="categorie.php?genres=1"><img src="assets/img/hommeca9.jpg" alt=""></a></div>
+        <div class="collection-box"><a href="categorie.php?genres=2"><img src="assets/img/femmeca5.jpg" alt=""></a></div>
+        <div class="collection-box"><a href="categorie.php?genres=3"><img src="assets/img/enfantcat.jpg" alt=""></a></div>
     </div>
     <picture>
         <img src="assets/img/feuille-pac.png" alt="">

@@ -149,7 +149,7 @@
             <ul class="sous-sous-cat">
                 <li class="sous-sous-cat_redirect hov"><a href="categorie.php?genres=2&categories=2&sous_cat=4">Joggings</a></li>
                 <li class="sous-sous-cat_redirect hov"><a href="categorie.php?genres=2&categories=2&sous_cat=5">Jeans</a></li>
-                <li class="sous-sous-cat_redirect hov"><a href="categorie.php?genres=2&categories=3&sous_cat=6">Cargo</a></li>
+                <li class="sous-sous-cat_redirect hov"><a href="categorie.php?genres=2&categories=2&sous_cat=6">Cargo</a></li>
             </ul>
         </li>
 

@@ -1593,8 +1593,8 @@ font-size: 13Px;
   }
   
   .slider::-moz-range-thumb {
-    width: 10px;
-    height: 10px;
+    width: 15px;
+    height: 15px;
     background: #df8270;
     cursor: pointer;
     border-radius: 50%;
@@ -1604,3 +1604,8 @@ font-size: 13Px;
         margin: 15px auto;
         width: 75%;
   }
+
+  .slidecontainer p{
+      margin-top: 10px;
+  }
+
