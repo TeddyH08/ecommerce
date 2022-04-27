@@ -97,6 +97,7 @@ body{
     width: 50%;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom : 50px;
     text-align: center;
 }
 .detail1 i{
@@ -201,6 +202,10 @@ body{
     margin-right: auto;
     margin-top : 25px;
     font-size: 18px;
+}
+
+.commentairesarticle i {
+    color:red;
 }
 
 .hr-perso{

@@ -3,7 +3,7 @@ session_start();
 
 require_once 'assets/db/connectdb.php';
 
-$id_login = 2;
+$id_login = $_SESSION['id'];
 
 ?>
 <!DOCTYPE html>
@@ -37,6 +37,25 @@ $id_login = 2;
     <?php include "assets/includes/navbar.php"; ?>
     <div class="container art">
 <?php
+
+if ((empty($_GET['id_article'])))
+{
+    echo "Produit en rupture de stock";
+}
+else {
+
+$sqll = "SELECT COUNT(*) as nombre FROM stocks
+WHERE id_articles = " . $_GET["id_article"] . "";
+$requetee = $db->prepare($sqll);
+$requetee->execute();
+$affichee = $requetee->fetch();
+
+if ($affichee['nombre'] == 0)
+{
+    echo "Produit en rupture de stock";
+}
+else {
+   
 $sqlarticle = "SELECT * FROM articles a, categories c, sous_categories sc, genres g, marques m
 WHERE a.id_categories=c.id_categories 
 AND a.id_sous_categories=sc.id_sous_categories
@@ -46,8 +65,6 @@ and a.id_articles = " . $_GET["id_article"] . "";
 $requetearticle = $db->prepare($sqlarticle);
 $requetearticle->execute();
 $affichearticle = $requetearticle->fetch();
-
-echo "login "; echo $id_login;
 ?>
   <div class="affichermess"></div>
 
@@ -90,31 +107,11 @@ echo "login "; echo $id_login;
                                 
                                 <?php
 
-// $sqldetail = "SELECT * FROM articles a, stocks s, tailles t, couleurs c
-// WHERE a.id_articles=s.id_articles 
-// AND s.id_tailles=t.id_tailles
-// AND s.id_couleurs=c.id_couleurs
-// AND s.id_articles = " . $_GET["id_article"] . "";
-// $requetedetail= $db->prepare($sqldetail);
-// $requetedetail->execute();
 
-$sqldetail2 = "SELECT t.taille_tailles AS nom, s.id_tailles AS id, COUNT(*) AS nombres FROM articles a, stocks s, tailles t, couleurs c 
-    WHERE a.id_articles=s.id_articles 
-    AND s.id_tailles=t.id_tailles 
-    AND s.id_couleurs=c.id_couleurs 
-    AND s.id_articles = " . $_GET["id_article"] . " 
-    GROUP BY s.id_tailles";
-    $requetedetail2= $db->prepare($sqldetail2);
-    $requetedetail2->execute();
-    
-    // while ($affichedetail2 = $requetedetail2->fetch())
-    // {
-        //     echo "nombres : "; echo  $affichedetail2['nombres']; echo  $affichedetail2['nom']; 
-        // }
-        
-        // <i class="fa-solid fa-heart"></i><br>
-        // <i class="fa-regular fa-heart"></i>
-        
+$sqldetail2 = "SELECT *  FROM tailles";
+$requetedetail2= $db->prepare($sqldetail2);
+$requetedetail2->execute();
+       
         ?>
 
 <div class="favorisb"></div>
@@ -171,8 +168,8 @@ $sqldetail2 = "SELECT t.taille_tailles AS nom, s.id_tailles AS id, COUNT(*) AS n
                         while ($affichedetail2 = $requetedetail2->fetch())
                         {
                             ?>
-                                <option value="<?php echo $affichedetail2['id'];?>">
-                                    <?php echo $affichedetail2['nom'];?></option>
+                                <option value="<?php echo $affichedetail2['id_tailles'];?>">
+                                    <?php echo $affichedetail2['taille_tailles'];?></option>
                                     <?php
                         }
                         ?>
@@ -218,27 +215,12 @@ $sqldetail2 = "SELECT t.taille_tailles AS nom, s.id_tailles AS id, COUNT(*) AS n
 </div>
 </div>
 
-
-<!-- <div class="detail1"><div class="titre2">Référence : </div><div class="titre2">1200920</div></div> -->
-
 <div class="detail2">
     <div class="titre3">Description de l'article :</div>
     <div class="titre4"></div>
     <div class="titre2"><?php echo $affichearticle['description_articles']; ?></div>
 </div>
 
-<div class="notearticle">
-    
-    <div class="voterarticle">
-        
-        Voter : <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-        class="fa-solid fa-star"></i>
-        
-    </div>
-    
-    Note : 3/5 (15 votes)
-</div>
 
 
 <!-- bouton achat  -->
@@ -248,12 +230,7 @@ $sqldetail2 = "SELECT t.taille_tailles AS nom, s.id_tailles AS id, COUNT(*) AS n
     <button type="submit" class="boutonajoutpanier">
         <i class='fa-solid fa-bag-shopping'></i> Ajouter au panier
     </button>
-    
-    
-    <!-- <button class="boutonajoutpanier"><i class='fa-solid fa-bag-shopping'></i> Ajouter au
-    panier</button> -->
-    <!-- <input type="submit" value="Ajouter au panier" class="boutonajoutpanier">    -->
-</form>
+                    </form>
 </div>
 
 <div class="inforetour">
@@ -270,7 +247,7 @@ $sqldetail2 = "SELECT t.taille_tailles AS nom, s.id_tailles AS id, COUNT(*) AS n
 
 </div><!-- fin article -->
 
-<div class="commentairesarticle">
+<div class="commentairesarticle" id="commentaire">
     
     <?php
 
@@ -304,7 +281,21 @@ if (isset($_GET["action"]))
                     echo "Votre commentaire est ajouté<br>";
                 }
             }
-        };
+
+            if ($_GET["action"] == 'comsuppr')
+            {
+
+                $sql = "DELETE FROM commentaires WHERE id_utilisateurs = :id_utilisateur and id_articles=:id_articles";
+                $requete = $db->prepare($sql);
+                $requete->execute(array(
+                    ":id_utilisateur" => $id_login,
+                    ":id_articles" => $_GET['id_article']
+                ));
+
+                echo "Votre commentaire est maintenant supprimé, vous pouvez en ajouter un nouveau<br><br>";
+            }
+        }
+
         
         $sqldanscomms= "SELECT COUNT(*) AS nombres FROM commentaires
         WHERE id_utilisateurs = :id_utilisateur and id_articles=:id_articles";
@@ -317,17 +308,19 @@ if (isset($_GET["action"]))
         
         
         if ($affichedanscomms['nombres'] >= 1){
-            echo "Vous avez déjà posté un commentaire vous pouvez le modifier<br><br>";
+            echo "Vous avez déjà posté un commentaire vous pouvez le supprimer <a href='article.php?id_article=".$_GET['id_article']."&action=comsuppr#commentaire'><i class='fa-solid fa-trash-can'></i></a><br><br>";
         }
-        else {
-            ?>
+        if ($affichedanscomms['nombres'] <= 0 ){ 
+           
+          
+           ?>
 
-<form method="POST" action="article.php?id_article=<?php echo $_GET['id_article'];?>&action=com">
-    <textarea name="commentaire" placeholder="Ecrire un commentaire" class="commentairestexte" max-lenght="255"></textarea>
+    <form action="article.php?id_article=<?php echo $_GET['id_article'];?>&action=com#commentaire" method="POST">
+    <textarea name="commentaire" placeholder="Ecrire un commentaire" class="commentairestexte" max-lenght="255"></textarea><br>
     <input type="submit"  class="boutonajoutcommentaire" value="Poster mon commentaire">
-</form>
+    </form>
 
-<?php
+        <?php
         }
         
         $sqlaffichecomms= "SELECT * FROM commentaires c, utilisateurs u
@@ -340,9 +333,7 @@ if (isset($_GET["action"]))
         while ($afficheaffichecomms = $requeteaffichecomms->fetch())
         {
             ?>
-                    De : <?php echo $afficheaffichecomms['prenom_utilisateurs'];?> le <?php echo $afficheaffichecomms['date_commentaires'];?> <br>
-                    Note : <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                    class="fa-solid fa-star"></i><br>
+                    De : <?php echo $afficheaffichecomms['prenom_utilisateurs'];?> le <?php echo $afficheaffichecomms['date_commentaires'];?> <br>        
                     <?php echo $afficheaffichecomms['commentaire_commentaires'];?><br>
                     
                     <div class="hr-perso"></div>
@@ -353,20 +344,14 @@ if (isset($_GET["action"]))
         ?>
 
 
-
-De : Flavie.S le 28/01/2022 <br>
-Note : <i class="fa-solid fa-star"></i><br>
-Déçue de la qualité <br>
-
-
-<div class="hr-perso"></div>
-
-De : Justine.M le 03/01/2022 <br>
-Article conforme a la description <br>
 </div>
 
 <br><br><br><br>
 
+<?php
+}
+}
+?>
 </div> <!-- fin container -->
 </div>
 

@@ -8,6 +8,9 @@ $id_login = 2;
 $tailles = $_POST['tailles'];
 $couleurs = $_POST['couleurs'];
 
+$html = "";
+$panier = "";
+
 if (isset($tailles, $couleurs) && !empty($tailles)  && !empty($couleurs)) 
 {
 
@@ -61,35 +64,69 @@ if (isset($tailles, $couleurs) && !empty($tailles)  && !empty($couleurs))
                 ":id_stocks" => $afficheverifarticle['id_stocks']    
             ));  
         
-            echo "L'article est ajouté à votre panier";
+            $html .= "L'article est ajouté à votre panier";
             }
 
             if ($afficheverifarticle['quantite_stock'] <= 0){
-                echo "<br>L'article n'est plus disponible dans cette taille et cette couleur";
+                $html .= "<br>L'article n'est plus disponible dans cette taille et cette couleur";
             }
 
         
     }
     
     if ($affichearticleexiste['nombres'] == 0){ 
-        echo "Désolé nous n'avons pas pu ajouter cette article dans le panier <br>";
+        $html .= "Désolé nous n'avons pas pu ajouter cette article dans le panier <br>";
     }
+
+
+    $sqlpanier = "SELECT COUNT(*) AS nombres FROM panier
+    WHERE id_utilisateurs=:id_utilisateurs";
+    $requetepanier = $db->prepare($sqlpanier);
+    $requetepanier->execute(array(
+        ":id_utilisateurs" => $id_login  
+    ));
+    $affichepanier = $requetepanier->fetch();
+
+    $paniernombre = $affichepanier['nombres'];
+
+
+    $panier .= "<a href='panier' class='shop'><i class='fa-solid fa-bag-shopping'></i><p class='cercle'>$paniernombre</p></a>";
+
+    // $panier .= "au revoir";
+
+    echo json_encode(
+        array(
+            "html" => $html,
+            "panier" => $panier
+        )
+    );
 
 }
 else {
 
 if ((empty($tailles)) && (!empty($couleurs))){
-    echo "Merci de choisir une taille<br>";
+    $html .= "Merci de choisir une taille<br>";
 }
 
 if ((empty($couleurs)) && (!empty($tailles))){
-    echo "Merci de choisir une couleur<br>";
+    $html .= "Merci de choisir une couleur<br>";
 }
 
 if ((empty($couleurs)) && (empty($tailles))){
-    echo "Merci de choisir une taille et une couleur<br>";
+    $html .= "Merci de choisir une taille et une couleur<br>";
 }
 
+$panier .="bonjour";
+
+echo json_encode(
+    array(
+        "html" => $html,
+        "panier" => $panier
+    )
+);
+
 }
+
+
 
 ?>
