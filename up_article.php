@@ -54,36 +54,36 @@
             <h2 class="titre_h2">Modification d'article</h2>
 
             <form action="up_article.php?id=<?php echo $contact['id_articles']; ?>" method="post">
-                <label for="nom">Nom :</label>
-                <input type="text" name="nom" id="nom" value="<?php echo $contact['nom_articles']; ?>" required></input>
+                <label for="nom" class="titr_lac">Nom :</label>
+                <input type="text" name="nom" id="nom" class="titr_inc" value="<?php echo $contact['nom_articles']; ?>" required></input>
 
-                <label for="marque">Marque :</label>
-                <input type="text" name="marque" id="marque" value="<?php echo $contact['marques_articles']; ?>" required></input>
+                <label for="marque" class="titr_lac">Marque :</label>
+                <input type="text" name="marque" id="marque" class="titr_inc" value="<?php echo $contact['marques_articles']; ?>" required></input>
 
-                <label for="desc">Description :</label>
-                <input type="text" name="desc" id="desc" value="<?php echo $contact['description_articles']; ?>" required></input>
+                <label for="desc" class="titr_lac">Description :</label>
+                <input type="text" name="desc" id="desc" class="titr_inc" value="<?php echo $contact['description_articles']; ?>" required></input>
 
-                <label for="prix">Prix :</label>
-                <input type="number" name="prix" id="prix" value="<?php echo $contact['prix_articles']; ?>" required></input>
+                <label for="prix" class="titr_lac">Prix :</label>
+                <input type="number" name="prix" id="prix" class="titr_inc" value="<?php echo $contact['prix_articles']; ?>" required></input>
 
-                <label for="genre">Genre :</label>
-                <input type="text" name="genre" id="genre" value="<?php echo $contact['genres_articles']; ?>" required></input>
+                <label for="genre" class="titr_lac">Genre :</label>
+                <input type="text" name="genre" id="genre" class="titr_inc" value="<?php echo $contact['genres_articles']; ?>" required></input>
 
-                <label for="categorie">Catégorie :</label>
-                <select name="categorie" required>
+                <label for="categorie" class="titr_lac">Catégorie :</label>
+                <select name="categorie" class="titr_inc" required>
                     <option value="<?php echo $contact['id_categories']; ?>"><?php echo $contact['id_categories']; ?></option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                 </select>
 
-                <label for="s_categorie">Sous catégorie :</label>
-                <select name="s_categorie" required>
+                <label for="s_categorie" class="titr_lac">Sous catégorie :</label>
+                <select name="s_categorie" class="titr_inc" required>
                     <option value="<?php echo $contact['id_sous_categories']; ?>"><?php echo $contact['id_sous_categories']; ?></option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                 </select>
 
-                <input type="submit" name="submit" id="submit" value="Modifications de l'utilisateur">
+                <input type="submit" name="submit" id="submit" class="titr_inc" value="Modifications de l'utilisateur">
             </form>
 
             <a href="crud.php" class="retour">Retour</a>

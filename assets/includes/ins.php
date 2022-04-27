@@ -2,16 +2,18 @@
     <div class="inscription">
         <h3>Inscription :</h3>
 
-        <form method="post" action="assets/includes/db/traitementins.php">
+        <div class="error"></div>
+
+        <form method="post" action="assets/includes/db/traitementins.php" id="formajax">
             <div class="model_un">
                 <div class="nom">
                     <label for="">Nom :</label>
-                    <input type="text" name="nom">
+                    <input type="text" name="nom" required>
                 </div>
 
                 <div class="prenom">
                     <label for="">Prénom :</label>
-                    <input type="text" name="prenom">
+                    <input type="text" name="prenom" required>
                 </div>
             </div>
 
@@ -29,43 +31,43 @@
 
             <div class="model_deux">
                 <label for="">Date de naissance :</label>
-                <input type="date" name="daten">
+                <input type="date" name="daten" required>
             </div>
 
             <div class="model_deux">
                 <label for="">Adresse mail :</label>
-                <input type="text" name="mail">
+                <input type="text" name="mail" required>
             </div>
 
             <div class="model_deux">
                 <label for="">Mot de passe :</label>
-                <input type="text"name="mdp">
+                <input type="text"name="mdp" required>
             </div>
 
             <div class="model_deux">
                 <label for="">Confirmation du mot de passe :</label>
-                <input type="text" name="mdp2">
+                <input type="text" name="mdp2" required>
             </div>
 
             <div class="model_deux">
                 <label for="">Pays :</label>
-                <input type="text" name="pays">
+                <input type="text" name="pays" required>
             </div>
 
             <div class="model_deux">
                 <label for="">Adresse :</label>
-                <input type="text" name="rue">
+                <input type="text" name="rue" required>
             </div>
 
             <div class="model_un">
                 <div class="nom">
                     <label for="">Code postal :</label>
-                    <input type="text" name="cp">
+                    <input type="text" name="cp" required>
                 </div>
 
                 <div class="prenom">
                     <label for="">Ville :</label>
-                    <input type="text" name="ville">
+                    <input type="text" name="ville" required>
                 </div>
             </div>
 

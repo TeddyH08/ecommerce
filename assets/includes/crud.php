@@ -3,14 +3,27 @@
     $sqlRequestusers = ("SELECT * FROM utilisateurs");
     $pdoStatusers = $db -> prepare($sqlRequestusers);
     $pdoStatusers->execute();
-
     $resultusers = $pdoStatusers->fetchAll(PDO::FETCH_ASSOC);
+
+    $sqlRequestroles = ("SELECT * FROM roles");
+    $pdoStatroles = $db -> prepare($sqlRequestroles);
+    $pdoStatroles->execute();
+    $resultroles = $pdoStatroles->fetchAll(PDO::FETCH_ASSOC);
 
     $sqlRequestarticle = ("SELECT * FROM articles");
     $pdoStatarticle = $db -> prepare($sqlRequestarticle);
     $pdoStatarticle->execute();
-
     $resultarticle = $pdoStatarticle->fetchAll(PDO::FETCH_ASSOC);
+
+    $sqlRequestc = ("SELECT * FROM categories");
+    $pdoStatc = $db -> prepare($sqlRequestc);
+    $pdoStatc->execute();
+    $resultc = $pdoStatc->fetchAll(PDO::FETCH_ASSOC);
+
+    $sqlRequestsc = ("SELECT * FROM sous_categories");
+    $pdoStatsc = $db -> prepare($sqlRequestsc);
+    $pdoStatsc->execute();
+    $resultsc = $pdoStatsc->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
 
@@ -57,7 +70,13 @@
                         <td><?php echo $value['cp_utilisateurs']; ?></td>
                         <td><?php echo $value['ville_utilisateur']; ?></td>
                         <td><?php echo $value['pays_utilisateurs']; ?></td>
-                        <td><?php echo $value['id_roles']; ?></td>
+                        <td><?php 
+                                foreach ($resultroles as $valueroles) {
+                                    if ($value['id_roles'] == $valueroles['id_roles']) {
+                                        echo $valueroles['nom_roles'];
+                                    }
+                                }
+                             ?></td>
                         <td><a href="edit_utilisateur.php?id=<?php echo $value['id_utilisateurs']; ?>" class="lire"><i class="fa-brands fa-readme"></i></a></td>
                         <td><a href="up_utilisateur.php?id=<?php echo $value['id_utilisateurs']; ?>" class="up"><i class="fa-solid fa-pencil"></i></a></td>
                         <td><a href="delete_utilisateur.php?id=<?php echo $value['id_utilisateurs']; ?>" class="suppr"><i class="fa-solid fa-trash"></i></a></td>
@@ -96,8 +115,20 @@
                         <td><?php echo $value['description_articles']; ?></td>
                         <td><?php echo $value['prix_articles']; ?></td>
                         <td><?php echo $value['genres_articles']; ?></td>
-                        <td><?php echo $value['id_categories']; ?></td>
-                        <td><?php echo $value['id_sous_categories']; ?></td>
+                        <td><?php
+                                foreach ($resultc as $valuec) {
+                                    if ($value['id_categories'] == $valuec['id_categories']) {
+                                        echo $valuec['nom_categories'];
+                                    }
+                                }
+                            ?></td>
+                        <td><?php 
+                                foreach ($resultsc as $valuesc) {
+                                    if ($value['id_sous_categories'] == $valuesc['id_sous_categories']) {
+                                        echo $valuesc['nom_sous_categories'];
+                                    }
+                                }
+                            ?></td>
                         <td><a href="edit_article.php?id=<?php echo $value['id_articles']; ?>" class="lire"><i class="fa-brands fa-readme"></i></a></td>
                         <td><a href="up_article.php?id=<?php echo $value['id_articles']; ?>" class="up"><i class="fa-solid fa-pencil"></i></a></td>
                         <td><a href="delete_article.php?id=<?php echo $value['id_articles']; ?>" class="suppr"><i class="fa-solid fa-trash"></i></a></td>

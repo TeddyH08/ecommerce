@@ -58,48 +58,48 @@
             <h2 class="titre_h2">Modification d'utilisateur</h2>
 
             <form action="up_utilisateur.php?id=<?php echo $contact['id_utilisateurs']; ?>" method="post">
-                <label for="prenom">Prénom :</label>
-                <input type="text" name="prenom" id="prenom" value="<?php echo $contact['prenom_utilisateurs']; ?>" required></input>
+                <label for="prenom" class="titr_lac">Prénom :</label>
+                <input type="text" name="prenom" id="prenom" class="titr_inc" value="<?php echo $contact['prenom_utilisateurs']; ?>" required></input>
 
-                <label for="nom">Nom :</label>
-                <input type="text" name="nom" id="nom" value="<?php echo $contact['nom_utilisateurs']; ?>" required></input>
+                <label for="nom" class="titr_lac">Nom :</label>
+                <input type="text" name="nom" id="nom" class="titr_inc" value="<?php echo $contact['nom_utilisateurs']; ?>" required></input>
 
-                <label for="genre">Genre :</label>
-                <select name="genre" required>
+                <label for="genre" class="titr_lac">Genre :</label>
+                <select name="genre" class="titr_inc" required>
                     <option value="<?php echo $contact['civilite_utilisateurs']; ?>"><?php echo $contact['civilite_utilisateurs']; ?></option>
                     <option value="femme">Femme</option>
                     <option value="homme">Homme</option>
                 </select>
 
-                <label for="date">Date de naissance :</label>
-                <input type="date" name="date" id="date" value="<?php echo $contact['datenaissance_utilisateurs']; ?>" required></input>
+                <label for="date" class="titr_lac">Date de naissance :</label>
+                <input type="date" name="date" id="date" class="titr_inc" value="<?php echo $contact['datenaissance_utilisateurs']; ?>" required></input>
 
-                <label for="mail">Adresse mail :</label>
-                <input type="text" name="mail" id="mail" value="<?php echo $contact['mail_utilisateurs']; ?>" required></input>
+                <label for="mail" class="titr_lac">Adresse mail :</label>
+                <input type="text" name="mail" id="mail" class="titr_inc" value="<?php echo $contact['mail_utilisateurs']; ?>" required></input>
 
-                <label for="tel">Téléphone :</label>
-                <input type="text" name="tel" id="tel" value="<?php echo $contact['tel_utilisateurs']; ?>" required></input>
+                <label for="tel" class="titr_lac">Téléphone :</label>
+                <input type="text" name="tel" id="tel" class="titr_inc" value="<?php echo $contact['tel_utilisateurs']; ?>" required></input>
 
-                <label for="rue">Adresse :</label>
-                <input type="text" name="rue" id="rue" value="<?php echo $contact['rue_utilisateurs']; ?>" required></input>
+                <label for="rue" class="titr_lac">Adresse :</label>
+                <input type="text" name="rue" id="rue" class="titr_inc" value="<?php echo $contact['rue_utilisateurs']; ?>" required></input>
 
-                <label for="cp">Code postal :</label>
-                <input type="text" name="cp" id="cp" value="<?php echo $contact['cp_utilisateurs']; ?>" required></input>
+                <label for="cp" class="titr_lac">Code postal :</label>
+                <input type="text" name="cp" id="cp" class="titr_inc" value="<?php echo $contact['cp_utilisateurs']; ?>" required></input>
 
-                <label for="ville">Ville :</label>
-                <input type="text" name="ville" id="ville" value="<?php echo $contact['ville_utilisateur']; ?>" required></input>
+                <label for="ville" class="titr_lac">Ville :</label>
+                <input type="text" name="ville" id="ville" class="titr_inc" value="<?php echo $contact['ville_utilisateur']; ?>" required></input>
 
-                <label for="pays">Pays :</label>
-                <input type="text" name="pays" id="pays" value="<?php echo $contact['pays_utilisateurs']; ?>" required></input>
+                <label for="pays" class="titr_lac">Pays :</label>
+                <input type="text" name="pays" id="pays" class="titr_inc" value="<?php echo $contact['pays_utilisateurs']; ?>" required></input>
 
-                <label for="role">Role :</label>
-                <select name="role" required>
+                <label for="role" class="titr_lac">Role :</label>
+                <select name="role" class="titr_inc" required>
                     <option value="<?php echo $contact['id_roles']; ?>"><?php echo $contact['id_roles']; ?></option>
                     <option value="admin">1</option>
                     <option value="client">2</option>
                 </select>
 
-                <input type="submit" name="submit" id="submit" value="Modifications de l'utilisateur">
+                <input type="submit" name="submit" id="submit" class="titr_inc" value="Modifications de l'utilisateur">
             </form>
 
             <a href="crud.php" class="retour">Retour</a>
