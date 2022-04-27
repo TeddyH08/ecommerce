@@ -1,4 +1,8 @@
-<?php include("assets/db/connectdb.php");?>
+<?php 
+include("assets/db/connectdb.php");
+session_start(); 
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
