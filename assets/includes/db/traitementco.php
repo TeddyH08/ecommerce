@@ -15,6 +15,7 @@
                  
                         if($mail == $result['mail_utilisateurs'] && password_verify($mdp,$result['password_utilisateurs'])){
                             session_start();
+                            $_SESSION['id'] = $result['id_utilisateurs'];
                             $_SESSION['role'] = $result['id_roles'];
                             $_SESSION['mail'] = $result['mail_utilisateurs'];
                             $_SESSION['prenom'] =  $result['prenom_utilisateurs'];

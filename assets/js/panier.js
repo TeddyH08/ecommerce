@@ -16,9 +16,12 @@ $( document ).ready(function() {
     
     $.post('traitement_panier.php', {tailles:tailles, couleurs:couleurs, id_article:product}, function (donnees){
 
-            // const obj = JSON.parse(donnees);
+            const obj = JSON.parse(donnees);
             $(".affichermess").empty();
-            $(".affichermess").html(donnees);
+            $(".affichermess").html(obj.html);
+
+            $(".panier").empty();
+            $(".panier").html(obj.panier);
 
         });
 
