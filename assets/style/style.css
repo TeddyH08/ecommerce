@@ -103,6 +103,14 @@ header {
 .blank {
     width: 15%;
     display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.reseaux {
+    width: 15%;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -273,6 +281,7 @@ ul {
     padding: 3px 7px;
     margin: 0 5px;
     transition: 500ms ease;
+    display: flex;
 }
 
 .acc {
@@ -847,44 +856,7 @@ h1{
       }
 }
 
-/* CATEGORIE */
 
-.categorie-tb {
-    width: 60%;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(221px, 1fr));
-    margin-top: 50px;
-  }
-
-.categorie-1 img{
-    width: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-      height: 300px;
-}
-
-    
-
-.categorie-1 {
-    width: 100%;
-    margin-right: 10px;
-    height: 400px;
-  }
-
-.categorie-1 ul{
-    display: flex;
-    flex-direction: column;
-    height: 400px;
-    justify-content: end;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    align-items: center;
-    font-family: 'Poppins', sans-serif;
-    line-height: 30px;
-}
 
 /* Inscription / Connexion */
 
@@ -1300,6 +1272,30 @@ select {
     margin: 15px 0;
 }
 
+/* panier nombre */
+
+.shop i{
+    font-size: 24px;
+}
+.shop p{
+    font-size: 12px;
+    text-align: center;
+    position: absolute;
+    margin-left: 12px;
+    z-index: 5;
+    margin-top: 10px;
+}
+
+.cercle {
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    border: 1px solid red;
+    background-color: #fff;
+}
+
+
+
 /* Profil */
 
 .prof {
@@ -1528,3 +1524,155 @@ td {
         width: 95%;
     }
 }
+
+/* CATEGORIE */
+.container-filtre-tb{
+    width: 100%;
+    display: flex;
+}
+.categorie-filtre-tb {
+    width: 15%;
+    
+  }
+
+.filtre {
+    width: 100%;
+    margin-top: 80px;
+    line-height: 35px;
+  }
+  .button-filtre {
+    width: 90px;
+    height: 30px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 11px;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #963420;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+  }
+  .button-filtre {
+    width: 90px;
+    height: 30px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 11px;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #963420;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+  }
+    
+.button-filtre:hover{
+    background-color: #df8270;
+    box-shadow: 0px 15px 20px #df83704b;
+    color: #fff;
+    transform: translateY(-7px);
+}
+
+.card-body h6{
+    font-weight: 200;
+font-size: 13Px;
+}
+.border img{
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+      height: 300px;
+
+}
+
+.border ul{
+    display: flex;
+    flex-direction: column;
+    line-height: 28px;
+    font-size: 20px;
+    font-weight: 200;
+    list-style: none;
+    margin-bottom: 40px;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.categorie-tb {
+    width: 60%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(221px, 1fr));
+    margin-top: 50px;
+  }
+
+.categorie-1 img{
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+      height: 300px;
+}
+
+    
+
+.categorie-1 {
+    width: 100%;
+    margin-right: 10px;
+    height: 400px;
+  }
+
+.categorie-1 ul{
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    justify-content: end;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    text-align: center;
+}
+
+
+.border h6{
+    font-weight: normal;
+}
+
+/* SLIDER RANGE PRIX */
+.slider:hover {
+    opacity: 1;
+  }
+
+#myrange.slider{
+    background-color: #df8270
+}
+
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #df8270;
+    cursor: pointer;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 10px;
+    height: 10px;
+    background: #df8270;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+
+  .slidecontainer{
+        margin: 15px auto;
+        width: 75%;
+  }
