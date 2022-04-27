@@ -15,6 +15,16 @@
     $pdoStatarticle->execute();
     $resultarticle = $pdoStatarticle->fetchAll(PDO::FETCH_ASSOC);
 
+    $sqlRequestmarques = ("SELECT * FROM marques");
+    $pdoStatmarques = $db -> prepare($sqlRequestmarques);
+    $pdoStatmarques->execute();
+    $resultmarques = $pdoStatmarques->fetchAll(PDO::FETCH_ASSOC);
+
+    $sqlRequestgenres = ("SELECT * FROM genres");
+    $pdoStatgenres = $db -> prepare($sqlRequestgenres);
+    $pdoStatgenres->execute();
+    $resultgenres = $pdoStatgenres->fetchAll(PDO::FETCH_ASSOC);
+
     $sqlRequestc = ("SELECT * FROM categories");
     $pdoStatc = $db -> prepare($sqlRequestc);
     $pdoStatc->execute();
@@ -68,7 +78,7 @@
                         <td><?php echo $value['tel_utilisateurs']; ?></td>
                         <td><?php echo $value['rue_utilisateurs']; ?></td>
                         <td><?php echo $value['cp_utilisateurs']; ?></td>
-                        <td><?php echo $value['ville_utilisateur']; ?></td>
+                        <td><?php echo $value['ville_utilisateurs']; ?></td>
                         <td><?php echo $value['pays_utilisateurs']; ?></td>
                         <td><?php 
                                 foreach ($resultroles as $valueroles) {
@@ -97,6 +107,9 @@
                     <th>Marque de l'article</th>
                     <th>Description de l'article</th>
                     <th>Prix de l'article</th>
+                    <th>Image principale</th>
+                    <th>Image secondaire 1</th>
+                    <th>Image secondaire 2</th>
                     <th>Genre de l'article</th>
                     <th>Catégorie de l'article</th>
                     <th>Sous catégorie de l'article</th>
@@ -111,24 +124,43 @@
                     <tr>
                         <td><?php echo $value['id_articles']; ?></td>
                         <td><?php echo $value['nom_articles']; ?></td>
-                        <td><?php echo $value['marques_articles']; ?></td>
+                        <td><?php
+                                foreach ($resultmarques as $valuemarques) {
+                                    if ($value['id_marques'] == $valuemarques['id_marques']) {
+                                        echo $valuemarques['nom_marques'];
+                                    }
+                                }
+                            ?>
+                        </td>
                         <td><?php echo $value['description_articles']; ?></td>
                         <td><?php echo $value['prix_articles']; ?></td>
-                        <td><?php echo $value['genres_articles']; ?></td>
+                        <td><?php echo $value['image1_articles']; ?></td>
+                        <td><?php echo $value['image2_articles']; ?></td>
+                        <td><?php echo $value['image3_articles']; ?></td>
+                        <td><?php
+                                foreach ($resultgenres as $valuegenres) {
+                                    if ($value['id_genres'] == $valuegenres['id_genres']) {
+                                        echo $valuegenres['nom_genres'];
+                                    }
+                                }
+                            ?>
+                        </td>
                         <td><?php
                                 foreach ($resultc as $valuec) {
                                     if ($value['id_categories'] == $valuec['id_categories']) {
                                         echo $valuec['nom_categories'];
                                     }
                                 }
-                            ?></td>
+                            ?>
+                        </td>
                         <td><?php 
                                 foreach ($resultsc as $valuesc) {
                                     if ($value['id_sous_categories'] == $valuesc['id_sous_categories']) {
                                         echo $valuesc['nom_sous_categories'];
                                     }
                                 }
-                            ?></td>
+                            ?>
+                        </td>
                         <td><a href="edit_article.php?id=<?php echo $value['id_articles']; ?>" class="lire"><i class="fa-brands fa-readme"></i></a></td>
                         <td><a href="up_article.php?id=<?php echo $value['id_articles']; ?>" class="up"><i class="fa-solid fa-pencil"></i></a></td>
                         <td><a href="delete_article.php?id=<?php echo $value['id_articles']; ?>" class="suppr"><i class="fa-solid fa-trash"></i></a></td>
