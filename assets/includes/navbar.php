@@ -5,8 +5,8 @@
 
 require_once 'assets/db/connectdb.php';
 
-            if (isset($_SESSION['role']) == 2 ){
-                echo '<a href="crud" class="users">Crud</a>';
+            if (isset($_SESSION['role']) >= 2 ){
+                echo '<a href="crud" class="users">Admin</a>';
             } 
             
             ?>
@@ -16,7 +16,7 @@ require_once 'assets/db/connectdb.php';
         <?php 
         
             if(isset($_SESSION['role']) > 0 ){
-                echo "<p class='users'> ".$_SESSION['prenom']." ".$_SESSION['nom']."</p>";
+                echo "<p class='userss'>Bonjour ".$_SESSION['prenom']." ".$_SESSION['nom']."</p>";
             } 
             
             ?>
