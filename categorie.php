@@ -1,4 +1,4 @@
-<?php include("assets/includes/connexionbdd.php");?>
+<?php include("assets/db/connectdb.php");?>
 <!DOCTYPE html>
 <html lang="fr">
 
