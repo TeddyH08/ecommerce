@@ -76,5 +76,5 @@ if(isset( $_POST['mail']) && isset( $_POST['mdp']) && isset( $_POST['prenom'])&&
         header("Location: ../../../connexion.php?succesinscrit");
   }
 } else {
-  header("location: ../../../inscription.php?id=erreurm");
+  echo "Veuillez remplir tout les champs";
 }

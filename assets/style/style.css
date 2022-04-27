@@ -93,6 +93,13 @@ header {
     text-decoration: none;
 }
 
+.reseaux {
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .blank {
     width: 15%;
     display: flex;
@@ -124,6 +131,15 @@ header {
 }
 
 .users {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 500ms ease;
+    margin: 0 10px;
+}
+
+.userss {
     display: block;
     text-align: center;
     text-decoration: none;
@@ -933,10 +949,25 @@ form {
     width: 90%;
 }
 
+.titr_lac {
+    font-size: 130%;
+    margin: 5px 15px;
+    width: 50%;
+}
+
+
 .titr_in {
     font-size: 130%;
     margin: 3px 15px;
     width: 90%;
+    border: 1px black solid;
+    border-radius: 5px;
+}
+
+.titr_inc {
+    font-size: 130%;
+    margin: 3px 15px;
+    width: 50%;
     border: 1px black solid;
     border-radius: 5px;
 }
@@ -1322,6 +1353,10 @@ select {
     align-self: center;
 }
 
+.dataTables_wrapper {
+    width: 100%;
+}
+
 #table_id_wrapper {
     margin-bottom: 100px;
 }
@@ -1449,6 +1484,7 @@ td {
     padding: 5px 15px;
     border-radius: 3px;
     margin-bottom: 50px;
+    margin-top: 20px;
 }
 
 /* Responsive */

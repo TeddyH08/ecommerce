@@ -20,7 +20,6 @@ require_once 'assets/db/connectdb.php';
             } 
             
             ?>
-            
         </div>
             <?php 
 
