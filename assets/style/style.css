@@ -95,6 +95,16 @@ header {
 
 .blank {
     width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.userss {
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .logo {
