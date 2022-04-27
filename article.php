@@ -37,20 +37,25 @@ $id_login = $_SESSION['id'];
     <?php include "assets/includes/navbar.php"; ?>
     <div class="container art">
 <?php
+
+if ((empty($_GET['id_article'])))
+{
+    echo "Produit en rupture de stock";
+}
+else {
+
 $sqll = "SELECT COUNT(*) as nombre FROM stocks
 WHERE id_articles = " . $_GET["id_article"] . "";
 $requetee = $db->prepare($sqll);
 $requetee->execute();
 $affichee = $requetee->fetch();
 
-
 if ($affichee['nombre'] == 0)
 {
     echo "Produit en rupture de stock";
-
 }
 else {
-    
+   
 $sqlarticle = "SELECT * FROM articles a, categories c, sous_categories sc, genres g, marques m
 WHERE a.id_categories=c.id_categories 
 AND a.id_sous_categories=sc.id_sous_categories
@@ -344,6 +349,7 @@ if (isset($_GET["action"]))
 <br><br><br><br>
 
 <?php
+}
 }
 ?>
 </div> <!-- fin container -->
