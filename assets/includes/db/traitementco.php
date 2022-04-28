@@ -23,6 +23,12 @@
                             $_SESSION['nom'] =  $result['nom_utilisateurs'];
                             $_SESSION['mdp'] =  $result['password_utilisateurs'];
                             $_SESSION['activer'] =  $result['activation_utilisateurs'];
+                            $_SESSION['genre'] = $result['civilite_utilisateurs'];
+                            $_SESSION['date'] = $result['datenaissance_utilisateurs'];
+                            $_SESSION['pays'] = $result['pays_utilisateurs'];
+                            $_SESSION['ville'] = $result['ville_utilisateurs'];
+                            $_SESSION['cp'] = $result['cp_utilisateurs'];
+                            $_SESSION['adresse'] = $result['rue_utilisateurs'];
                    
                             header("Location:../../../index.php");
                             
