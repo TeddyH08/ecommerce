@@ -1,8 +1,11 @@
 <?php
 
-session_start(); 
+require 'assets/db/auth.php';
+forcer_utilisateur_connecte();
 
-require "assets/db/connectdb.php"
+require "assets/db/connectdb.php";
+
+if ($_SESSION['role'] == 2) {
 
 ?>
 <!DOCTYPE html>
@@ -42,3 +45,9 @@ require "assets/db/connectdb.php"
         <script src="assets/js/tab.js"></script>
     </body>
 </html>
+
+<?php 
+} else {
+    header("Location: index.php");
+}
+?>
