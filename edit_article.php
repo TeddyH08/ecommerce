@@ -45,6 +45,9 @@ if ($_SESSION['role'] == 2) {
                     <p>Marque :</p>
                     <p>Description :</p>
                     <p>Prix :</p>
+                    <p>Image principale :</p>
+                    <p>Image secondaire 1 :</p>
+                    <p>Image secondaire 2 :</p>
                     <p>Genre :</p>
                     <p>Catégorie :</p>
                     <p>Sous catégorie :</p>
@@ -52,12 +55,43 @@ if ($_SESSION['role'] == 2) {
 
                 <div>
                     <p><?php echo $resultat['nom_articles'] ?></p>
-                    <p><?php echo $resultat['marques_articles'] ?></p>
+                    <p><?php 
+                            foreach ($resultmarques as $valuemarques) {
+                                if ($resultat['id_marques'] == $valuemarques['id_marques']) {
+                                    echo $valuemarques['nom_marques'];
+                                }
+                            }
+                        ?>
+                    </p>
                     <p><?php echo $resultat['description_articles'] ?></p>
                     <p><?php echo $resultat['prix_articles'] ?></p>
-                    <p><?php echo $resultat['genres_articles'] ?></p>
-                    <p><?php echo $resultat['id_categories'] ?></p>
-                    <p><?php echo $resultat['id_sous_categories'] ?></p>
+                    <p><?php echo $resultat['image1_articles'] ?></p>
+                    <p><?php echo $resultat['image2_articles'] ?></p>
+                    <p><?php echo $resultat['image3_articles'] ?></p>
+                    <p><?php
+                            foreach ($resultgenres as $valuegenres) {
+                                if ($resultat['id_genres'] == $valuegenres['id_genres']) {
+                                    echo $valuegenres['nom_genres'];
+                                }
+                            }
+                        ?>
+                    </p>
+                    <p><?php
+                            foreach ($resultc as $valuec) {
+                                if ($resultat['id_categories'] == $valuec['id_categories']) {
+                                    echo $valuec['nom_categories'];
+                                }
+                            }
+                        ?>
+                    </p>
+                    <p><?php
+                            foreach ($resultsc as $valuesc) {
+                                if ($resultat['id_sous_categories'] == $valuesc['id_sous_categories']) {
+                                    echo $valuesc['nom_sous_categories'];
+                                }
+                            }
+                        ?>
+                    </p>
                 </div>
             </div>
 

@@ -1,11 +1,11 @@
 <?php
 
-require 'assets/db/auth.php';
-forcer_utilisateur_connecte();
+// require 'assets/db/auth.php';
+// forcer_utilisateur_connecte();
 
 require "assets/db/connectdb.php";
 
-if ($_SESSION['role'] == 2) {
+//if ($_SESSION['role'] == 2) {
 
 ?>
 <!DOCTYPE html>
@@ -47,7 +47,7 @@ if ($_SESSION['role'] == 2) {
 </html>
 
 <?php 
-} else {
-    header("Location: index.php");
-}
+// } else {
+//     header("Location: index.php");
+// }
 ?>
