@@ -44,7 +44,10 @@ if (est_connecte()) {
 } else {
 ?>
 <div class="container">
-    <p>Veuillez vous connecter pour voir votre profil.</p>
+    <div class="warning">
+        <h2 class="titre_h2">Attention vous n'êtes pas connecté</h2>
+        <p>Veuillez vous connecter pour accéder à votre profil.</p>
+    </div>
 </div>
 <?php
 }
