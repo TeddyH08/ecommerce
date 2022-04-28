@@ -1,4 +1,10 @@
 <?php
+require 'assets/db/auth.php';
+forcer_utilisateur_connecte();
+
+require "assets/db/connectdb.php";
+
+if ($_SESSION['role'] == 2) {   
 
     $sqlRequestusers = ("SELECT * FROM utilisateurs");
     $pdoStatusers = $db -> prepare($sqlRequestusers);
@@ -172,3 +178,8 @@
         <a href="Accueil" class="retour">Retour</a> 
     </div> 
 </div>
+<?php 
+} else {
+    header("Location: index.php");
+}
+?>

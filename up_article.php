@@ -1,10 +1,10 @@
 <?php
-    // require 'assets/db/auth.php';
-    // forcer_utilisateur_connecte();
+    require 'assets/db/auth.php';
+    forcer_utilisateur_connecte();
     
     require "assets/db/connectdb.php";
     
-    // if ($_SESSION['role'] == 2) {
+    if ($_SESSION['role'] == 2) {
     
     $stmt = $db->prepare('SELECT * FROM articles WHERE id_articles = ?');
     $stmt->execute(array($_GET['id']));
@@ -160,7 +160,7 @@
 </body>
 </html>
 <?php 
-// } else {
-//     header("Location: index.php");
-// }
+} else {
+    header("Location: index.php");
+}
 ?>
