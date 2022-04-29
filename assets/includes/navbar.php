@@ -46,16 +46,16 @@ require_once 'assets/db/connectdb.php';
 
     <nav class="navbar">
         <div class="logo">
-                <a href="index.php"><img src="assets/img/logo.jpg" class="log"></a>
+                <a href="index.php"><img src="assets/img/logoamaplon.png" class="log"></a>
         </div>
 
         <div id="nav" class="respon">
             <div class="menu">
                 <ul>
                     <li class="categorie dropdown">
-                        <a href="categorie.php">Nouveautés</a>
+                        <a href="nouveaute.php">Nouveautés</a>
 
-                        <div class="dd-mnu">
+                        <!-- <div class="dd-mnu">
                             <ul class="dropdown-menu">
                                 <li class="sous-cat animate__animated animate__fadeIn">
                                     <a href="nouveaux/hauts" class="hov">Hauts</a>
@@ -88,7 +88,7 @@ require_once 'assets/db/connectdb.php';
                                     </ul>
                                 </li>
                             </ul>
-                        </div>
+                        </div> -->
                     </li>
 
                     <li class="categorie dropdown">
@@ -209,7 +209,7 @@ require_once 'assets/db/connectdb.php';
 </li>
 
 <li class="categorie dropdown">
-<a href="categorie.php">Sports</a>
+<a href="">Sports</a>
 
 <div class="dd-mnu">
     <ul class="dropdown-menu">
