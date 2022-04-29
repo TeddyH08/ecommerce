@@ -3,7 +3,7 @@ session_start();
 
 require_once 'assets/db/connectdb.php';
 
-$id_login = $_SESSION['id'];
+// $id_login = $_SESSION['id'];
 
 ?>
 <!DOCTYPE html>
@@ -121,6 +121,12 @@ $requetedetail2->execute();
         <div class="titre2"><?php echo $affichearticle['nom_articles']; ?> </div>
         <div class="titre2 favorisa">
             <?php
+
+if (isset($_SESSION['id']))
+{
+
+$id_login = $_SESSION['id'];
+
     $sqlfavoris = "SELECT COUNT(*) AS nombres FROM favoris
     WHERE  id_utilisateurs = :id_utilisateur
     AND id_articles = :id_article";
@@ -149,6 +155,7 @@ $requetedetail2->execute();
     </form>
     <?php
     }
+}else{}
     ?>
 
 
@@ -251,6 +258,10 @@ $requetedetail2->execute();
     
     <?php
 
+if (isset($_SESSION['id']))
+{
+
+$id_login = $_SESSION['id'];
 if (isset($_GET["action"]))
 {
     if ($_GET["action"] == 'com')
@@ -322,6 +333,7 @@ if (isset($_GET["action"]))
 
         <?php
         }
+    }
         
         $sqlaffichecomms= "SELECT * FROM commentaires c, utilisateurs u
         WHERE  c.id_utilisateurs=u.id_utilisateurs

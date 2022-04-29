@@ -1109,7 +1109,7 @@ form {
 }
 
 .fav_img {
-    width: 100%;
+    width: 50%;
 }
 
 .sous_img_fav {
@@ -1487,6 +1487,22 @@ td {
     margin-top: 20px;
 }
 
+.boutonvoirarticle
+{
+    background-color: #df8270;
+    border: none;
+    width: 150px;
+    height: 40px;
+    border-radius: 5px;
+    margin-top: 15px;
+    color : white;
+    font-size: 18px;
+    cursor: pointer;
+    padding:10px;
+}
+.boutonvoirarticle:hover{
+    background-color: #f49b89;
+}
 /* Responsive */
 
 @media screen and (max-width: 1200px) {
