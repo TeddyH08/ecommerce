@@ -8,6 +8,13 @@
             ":id_utilisateurs" => $id_login 
         ));    
         $resultpaniers = $requeteajoutpanier->fetchAll(PDO::FETCH_ASSOC);
+
+        $sqlsupp = "SELECT * FROM panier WHERE id_utilisateurs = :id_utilisateurs";
+        $requetesupp = $db->prepare($sqlsupp);
+        $requetesupp->execute(array(
+            ":id_utilisateurs" => $id_login 
+        ));    
+        $resultsupp = $requetesupp->fetch(PDO::FETCH_ASSOC);
         
         $sqlstock = "SELECT * FROM stocks";
         $requetestock = $db->prepare($sqlstock);
@@ -30,12 +37,7 @@
         $requetecat = $db->prepare($sqlcat);
         $requetecat->execute();    
         $resultcat = $requetecat->fetchAll(PDO::FETCH_ASSOC);
-        
-        $id_paniers = "";
-            $query = "DELETE FROM panier WHERE panier . id_panier = :id_panier";
-              $retour = $db -> prepare($query);
-            $retour->execute(array(  ":id_panier" => $id_paniers ));
-
+       
          ?> 
 <div class="container">
     <div class="pani">
@@ -91,7 +93,7 @@
                         <option value="9">9</option>
                         <option value="10">10</option>
                     </select>
-                    <a href="" class="suppr">Supprimer</a>
+                    <a href="assets/includes/delete_panier.php?idp=<?php echo $resultsupp['id_panier']; ?>" class="suppr">Supprimer</a>
                 </div>
             </div><?php } ?>
         </div>
@@ -116,7 +118,8 @@
 
             <div class="artic">
                 <p>Total à payer :</p>
-                <p>Prix</p>
+                <p></p>
+                 
             </div>
 
             <a href="" class="paie">Paiement</a>
