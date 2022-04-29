@@ -2,8 +2,11 @@
     <div class="top">
         <div class="reseaux">
             <?php 
-            if(isset($_SESSION['role']) >= 2 ){
-                echo '<a href="crud" class="users">Crud</a>';
+
+require_once 'assets/db/connectdb.php';
+
+            if (isset($_SESSION['role']) >= 2 ){
+                echo '<a href="crud" class="users">Admin</a>';
             } 
             
             ?>
@@ -13,11 +16,10 @@
         <?php 
         
             if(isset($_SESSION['role']) > 0 ){
-                echo "<p class='users'> ".$_SESSION['prenom']." ".$_SESSION['nom']."</p>";
+                echo "<p class='userss'>Bonjour ".$_SESSION['prenom']." ".$_SESSION['nom']."</p>";
             } 
             
             ?>
-            
         </div>
             <?php 
 
@@ -252,9 +254,36 @@
                     <input type="text" class="search-bar">
                     <a href="" class="search-button"><i class="fa-solid fa-magnifying-glass"></i></a>
                 </div>
-                <a href="Favoris" class="fav"><i class="fa-solid fa-heart"></i></a>
-                <a href="Panier" class="shop"><i class="fa-solid fa-bag-shopping"></i></a>
-                <a href="Profil" class="acc"><i class="fa-solid fa-user"></i></a>
+              
+                <a href="favoris" class="fav"><i class="fa-solid fa-heart"></i></a>
+
+                <?php
+
+                    $sqlpanier1 = "SELECT COUNT(*) AS nombres FROM panier
+                    WHERE id_utilisateurs=:id_utilisateurs";
+                    $requetepanier1 = $db->prepare($sqlpanier1);
+                    $requetepanier1->execute(array(
+                        ":id_utilisateurs" => $_SESSION['id']  
+                    ));
+                    $affichepanier1 = $requetepanier1->fetch();
+
+
+                    if ($affichepanier1['nombres'] == 0) {
+                        ?>
+                        <div class="panier" id="panier"><a href="panier" class="shop"><i class="fa-solid fa-bag-shopping"></i></a></div>
+                        <?php
+                    }
+                    else {
+                        ?>
+                        <div class="panier" id="panier"><a href="panier" class="shop"><i class="fa-solid fa-bag-shopping"></i><p class="cercle">
+                            <?php echo $affichepanier1['nombres']; ?></p></a></div>
+                        <?php
+                    }
+
+                ?>
+
+                
+                <a href="profil" class="acc"><i class="fa-solid fa-user"></i></a>
             </div>
         </div>
 
