@@ -1,3 +1,6 @@
+<?php
+if (est_connecte()) {
+?>
 <div class="container">
     <div class="prof">
         <h2 class="titre_h2">Bonjour TRUC,</h2>
@@ -14,13 +17,13 @@
             </div>
 
             <div class="base_profil">
-                <p>Moulin</p>
-                <p>Jordan</p>
-                <p>Femme</p>
-                <p>../05/1999</p>
-                <p>jordan08000@gmail.com</p>
-                <p>France</p>
-                <p>1 Rue du Mont-Cul, 08090, Montcy-Notre-Dame</p>
+                <p><?php echo $_SESSION['nom']; ?></p>
+                <p><?php echo $_SESSION['prenom']; ?></p>
+                <p><?php echo $_SESSION['genre']; ?></p>
+                <p><?php echo $_SESSION['date']; ?></p>
+                <p><?php echo $_SESSION['mail']; ?></p>
+                <p><?php echo $_SESSION['pays']; ?></p>
+                <p><?php echo $_SESSION['rue'] .", ". $_SESSION['cp'] .", ". $_SESSION['ville']; ?></p>
             </div>
 
             <div class="base_profil">
@@ -37,3 +40,15 @@
         <h2 class="titre_h2 m">Historique d'achat :</h2>
     </div>
 </div>
+<?php
+} else {
+?>
+<div class="container">
+    <div class="warning">
+        <h2 class="titre_h2">Attention vous n'êtes pas connecté</h2>
+        <p>Veuillez vous connecter pour accéder à votre profil.</p>
+    </div>
+</div>
+<?php
+}
+?>

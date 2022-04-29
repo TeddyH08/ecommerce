@@ -1,5 +1,8 @@
 <?php
-session_start(); 
+require 'assets/db/auth.php'; 
+session_start();
+
+require "assets/db/connectdb.php";
 ?>
 <!DOCTYPE html>
 
