@@ -259,6 +259,13 @@ require_once 'assets/db/connectdb.php';
 
                 <?php
 
+                    if(empty($_SESSION['id'])){
+                        ?>
+                            <div class="panier" id="panier"><a href="panier" class="shop"><i class="fa-solid fa-bag-shopping"></i></a></div>
+                        <?php
+                    }
+                    else {
+
                     $sqlpanier1 = "SELECT COUNT(*) AS nombres FROM panier
                     WHERE id_utilisateurs=:id_utilisateurs";
                     $requetepanier1 = $db->prepare($sqlpanier1);
@@ -279,6 +286,8 @@ require_once 'assets/db/connectdb.php';
                             <?php echo $affichepanier1['nombres']; ?></p></a></div>
                         <?php
                     }
+
+                }
 
                 ?>
 
