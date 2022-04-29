@@ -1,7 +1,10 @@
 <?php
-    require 'assets/db/connectdb.php';
+    require 'assets/db/auth.php';
+    forcer_utilisateur_connecte();
     
-    session_start(); 
+    require "assets/db/connectdb.php";
+    
+    if ($_SESSION['role'] == 2) {
     
     $stmt = $db->prepare('SELECT * FROM utilisateurs WHERE id_utilisateurs = ?');
     $stmt->execute(array($_GET['id']));
@@ -21,7 +24,7 @@
             $pays = isset($_POST['pays']) ? $_POST['pays'] : '';
             $role = isset($_POST['role']) ? $_POST['role'] : '';
 
-            $stmt = $db->prepare('UPDATE utilisateurs SET prenom_utilisateurs = ?, nom_utilisateurs = ?, civilite_utilisateurs = ?, datenaissance_utilisateurs = ?, mail_utilisateurs = ?, tel_utilisateurs = ?, rue_utilisateurs = ?, cp_utilisateurs = ?, ville_utilisateur = ?, pays_utilisateurs =  ?, id_roles = ? WHERE id_utilisateurs = ?');
+            $stmt = $db->prepare('UPDATE utilisateurs SET prenom_utilisateurs = ?, nom_utilisateurs = ?, civilite_utilisateurs = ?, datenaissance_utilisateurs = ?, mail_utilisateurs = ?, tel_utilisateurs = ?, rue_utilisateurs = ?, cp_utilisateurs = ?, ville_utilisateurs = ?, pays_utilisateurs =  ?, id_roles = ? WHERE id_utilisateurs = ?');
             $stmt->execute(array($prenom, $nom, $genre, $date, $mail, $tel, $rue, $cp, $ville, $pays, $role, $_GET['id']));
 
             header('Location: crud.php');
@@ -87,7 +90,7 @@
                 <input type="text" name="cp" id="cp" class="titr_inc" value="<?php echo $contact['cp_utilisateurs']; ?>" required></input>
 
                 <label for="ville" class="titr_lac">Ville :</label>
-                <input type="text" name="ville" id="ville" class="titr_inc" value="<?php echo $contact['ville_utilisateur']; ?>" required></input>
+                <input type="text" name="ville" id="ville" class="titr_inc" value="<?php echo $contact['ville_utilisateurs']; ?>" required></input>
 
                 <label for="pays" class="titr_lac">Pays :</label>
                 <input type="text" name="pays" id="pays" class="titr_inc" value="<?php echo $contact['pays_utilisateurs']; ?>" required></input>
@@ -107,3 +110,8 @@
     </div>
 </body>
 </html>
+<?php 
+} else {
+    header("Location: index.php");
+}
+?>

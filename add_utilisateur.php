@@ -1,5 +1,10 @@
 <?php
-session_start(); 
+require 'assets/db/auth.php';
+forcer_utilisateur_connecte();
+
+require "assets/db/connectdb.php";
+
+if ($_SESSION['role'] == 2) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -85,3 +90,8 @@ session_start();
     </div>
 </body>
 </html>
+<?php 
+} else {
+    header("Location: index.php");
+}
+?>

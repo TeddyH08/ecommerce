@@ -6,9 +6,10 @@ include("assets/db/connectdb.php");
     <div class="titre-accueil-h1"><h1>Bienvenue sur Amaplon</h1></div>
 
         <div class="accueil-image">
-            <div class="image1-tb"><h2 class="title_h2">Nouvelle collection</h2></div>
+        <a class="image1-tb" href="./rupture.php"><h2 class="title_h2">Offre à saisir avant la rupture</h2></a>
             <div class="image2-tb"><p></p></div>
-            <div class="text-image2-tb"><a href=""><p>Zoom sur les Robes<br>L'indispensable de votre vestiaire</p></a></div>
+            <div class="text-image2-tb"><a href=""><p>La sélection à ne pas manquer
+                                                    <br>Tout le monde en parle</p></a></div>
             <div class="image3-tb"></div>
             <div class="text-image3-tb"><a href=""><p>Zoom sur les Robes<br>L'indispensable de votre vestiaire</p></a></div>
         </div>
@@ -50,11 +51,11 @@ include("assets/db/connectdb.php");
     <button class="btn-nouveau">Voir toutes les nouveautés</button>
 
     <hr>
-    <h2 style="text-align: center; margin-top:25px; margin-bottom:25px;" class="title_h2">Notre Collection</h2>
+    <h2 style="text-align: center; margin-top:25px; margin-bottom:25px;" class="title_h2">Nos Collections</h2>
     <div class="collection">
-        <div class="collection-box"><a href="categorie.php?genres=1"><img src="assets/img/hommeca9.jpg" alt=""></a></div>
-        <div class="collection-box"><a href="categorie.php?genres=2"><img src="assets/img/femmeca5.jpg" alt=""></a></div>
-        <div class="collection-box"><a href="categorie.php?genres=3"><img src="assets/img/enfantcat.jpg" alt=""></a></div>
+        <div class="collection-box"><a href="categorie.php?genres=1"><p>Hommes</p><img src="assets/img/hommeca9.jpg" alt=""></a></div>
+        <div class="collection-box"><a href="categorie.php?genres=2"><p>Femmes</p><img src="assets/img/femmeca5.jpg" alt=""></a></div>
+        <div class="collection-box"><a href="categorie.php?genres=3"><p>Enfants</p><img src="assets/img/enfantcat.jpg" alt=""></a></div>
     </div>
     <picture>
         <img src="assets/img/feuille-pac.png" alt="">

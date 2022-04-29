@@ -149,8 +149,8 @@ header {
 }
 
 .log {
-    width: 100%;
-    border-radius: 50%;
+    width: 140px;
+    height: 76px;
 }
 
 .respon {
@@ -304,6 +304,7 @@ ul {
 }
 .hov:hover {
     text-decoration: underline;
+    color: #df8270;
 }
 
 @media screen and (min-width: 1024px) {
@@ -462,10 +463,11 @@ h1{
 .image1-tb{
     grid-column: 1/2;
     grid-row: 1/11;
-    background-image: url(../img/main-banner-desktop-10-03.jpg);
+    margin-bottom: 20px;
+
+    background: linear-gradient(rgba(0, 0, 0, 0.027), rgba(0, 0, 0, 0.082)), url('../img/main-banner-desktop-10-03.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    margin-bottom: 20px;
     background-position: center;
 }
 
@@ -634,6 +636,12 @@ h1{
       margin-right: 20px;
   }
 
+  .collection-box p{
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 20px;
+  }
+
   .collection-box img{
       height: 100%;
       width: 100%;
@@ -656,7 +664,7 @@ h1{
       margin-bottom: auto;
     width: 80%;
     justify-content: center;
-    margin-top: 40px;
+    margin-top: 75px;
     margin-bottom: 40px;
   }
 
@@ -681,6 +689,8 @@ h1{
       text-align: center;
       font-size: 14px;
       font-family: 'Poppins';
+      display: flex;
+    flex-direction: column;
   }
 
 
@@ -689,12 +699,11 @@ h1{
   footer{
       display: flex;
       width: 100%;
-      margin-left: auto;
-      margin-right: auto;
       margin-top: 35px;
       padding-top: 40px;
       padding-bottom: 40px;
       background-color: rgb(30, 30, 30);
+      bottom: 0;
   }
   footer ul{
       list-style: none;
@@ -840,9 +849,7 @@ h1{
       }
       footer{
           flex-direction: column;
-          width: 80%;
-          margin-left: auto;
-          margin-right: auto;
+          width: 100%;
       }
       .a-propos{
           width: 100%;
@@ -1307,6 +1314,20 @@ select {
     margin-bottom: 100px;
 }
 
+.warning {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 30px 0;
+}
+
+.warning p {
+    font-size: 120%;
+    margin: 20px 0;
+}
+
 .infos_profil {
     display: flex;
     flex-direction: row;
@@ -1415,7 +1436,7 @@ td {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 30%;
+    width: 60%;
     font-size: 120%;
 }
 
@@ -1660,6 +1681,43 @@ font-size: 13Px;
 
 .border h6{
     font-weight: normal;
+}
+/* NOuveaute */
+.nouveaute-tb {
+    width: 60%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(221px, 1fr));
+    margin-top: 50px;
+  }
+
+.nouveaute-1 img{
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+      height: 300px;
+}
+
+    
+
+.nouveaute-1 {
+    width: 100%;
+    margin-right: 10px;
+    height: 400px;
+  }
+
+.nouveaute-1 ul{
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    justify-content: end;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    text-align: center;
+    font-size: 12px;
 }
 
 /* SLIDER RANGE PRIX */

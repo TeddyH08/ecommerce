@@ -1,11 +1,34 @@
 <?php
-    require 'assets/db/connectdb.php';
+    require 'assets/db/auth.php';
+    forcer_utilisateur_connecte();
     
-    session_start(); 
+    require "assets/db/connectdb.php";
+    
+    if ($_SESSION['role'] == 2) {
     
     $stmt = $db->prepare('SELECT * FROM articles WHERE id_articles = ?');
     $stmt->execute(array($_GET['id']));
     $contact = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    $sqlRequestmarques = ("SELECT * FROM marques");
+    $pdoStatmarques = $db -> prepare($sqlRequestmarques);
+    $pdoStatmarques->execute();
+    $resultmarques = $pdoStatmarques->fetchAll(PDO::FETCH_ASSOC);
+
+    $sqlRequestgenres = ("SELECT * FROM genres");
+    $pdoStatgenres = $db -> prepare($sqlRequestgenres);
+    $pdoStatgenres->execute();
+    $resultgenres = $pdoStatgenres->fetchAll(PDO::FETCH_ASSOC);
+
+    $sqlRequestc = ("SELECT * FROM categories");
+    $pdoStatc = $db -> prepare($sqlRequestc);
+    $pdoStatc->execute();
+    $resultc = $pdoStatc->fetchAll(PDO::FETCH_ASSOC);
+
+    $sqlRequestsc = ("SELECT * FROM sous_categories");
+    $pdoStatsc = $db -> prepare($sqlRequestsc);
+    $pdoStatsc->execute();
+    $resultsc = $pdoStatsc->fetchAll(PDO::FETCH_ASSOC);
 
     if (isset($_GET['id'])) {
         if (!empty($_POST)) {
@@ -17,7 +40,7 @@
             $categorie = isset($_POST['categorie']) ? $_POST['categorie'] : '';
             $s_categorie = isset($_POST['s_categorie']) ? $_POST['s_categorie'] : '';
 
-            $stmt = $db->prepare('UPDATE articles SET nom_articles = ?, marques_articles = ?, description_articles = ?, prix_articles = ?, genres_articles = ?, id_categories = ?, id_sous_categories = ? WHERE id_articles = ?');
+            $stmt = $db->prepare('UPDATE articles SET nom_articles = ?, id_marques = ?, description_articles = ?, prix_articles = ?, id_genres = ?, id_categories = ?, id_sous_categories = ? WHERE id_articles = ?');
             $stmt->execute(array($nom, $marque, $desc, $prix, $genre, $categorie, $s_categorie, $_GET['id']));
 
             header('Location: crud.php');
@@ -58,7 +81,18 @@
                 <input type="text" name="nom" id="nom" class="titr_inc" value="<?php echo $contact['nom_articles']; ?>" required></input>
 
                 <label for="marque" class="titr_lac">Marque :</label>
-                <input type="text" name="marque" id="marque" class="titr_inc" value="<?php echo $contact['marques_articles']; ?>" required></input>
+                <select name="marque" class="titr_inc" required>
+                    <option value="<?php echo $contact['id_marques']; ?>">
+                        <?php foreach ($resultmarques as $valuemarques) {
+                            if ($contact['id_marques'] == $valuemarques['id_marques']) {
+                                echo $valuemarques['nom_marques'];
+                            }
+                        } ?>
+                    </option>
+                    <?php foreach ($resultmarques as $valuemarques) {
+                        echo "<option value=". $valuemarques['id_marques'] .">". $valuemarques['nom_marques'] ."</option>";
+                    } ?>
+                </select>
 
                 <label for="desc" class="titr_lac">Description :</label>
                 <input type="text" name="desc" id="desc" class="titr_inc" value="<?php echo $contact['description_articles']; ?>" required></input>
@@ -66,21 +100,55 @@
                 <label for="prix" class="titr_lac">Prix :</label>
                 <input type="number" name="prix" id="prix" class="titr_inc" value="<?php echo $contact['prix_articles']; ?>" required></input>
 
+                <label for="imgp" class="titr_lac">Image principale :</label>
+                <input type="text" name="imgp" id="imgp" class="titr_inc" value="<?php echo $contact['image1_articles']; ?>" required></input>
+
+                <label for="imgs1" class="titr_lac">Image secondaire 1 :</label>
+                <input type="text" name="imgs1" id="imgs1" class="titr_inc" value="<?php echo $contact['image2_articles']; ?>" required></input>
+
+                <label for="imgs2" class="titr_lac">Image secondaire 2 :</label>
+                <input type="text" name="imgs2" id="imgs2" class="titr_inc" value="<?php echo $contact['image3_articles']; ?>" required></input>
+
                 <label for="genre" class="titr_lac">Genre :</label>
-                <input type="text" name="genre" id="genre" class="titr_inc" value="<?php echo $contact['genres_articles']; ?>" required></input>
+                <select name="genre" class="titr_inc" required>
+                    <option value="<?php echo $contact['id_categories']; ?>">
+                        <?php foreach ($resultgenres as $valuegenres) {
+                            if ($contact['id_genres'] == $valuegenres['id_genres']) {
+                                echo $valuegenres['nom_genres'];
+                            }
+                        } ?>
+                    </option>
+                    <?php foreach ($resultgenres as $valuegenres) {
+                        echo "<option value=". $valuegenres['id_genres'] .">". $valuegenres['nom_genres'] ."</option>";
+                    } ?>
+                </select>
 
                 <label for="categorie" class="titr_lac">Catégorie :</label>
                 <select name="categorie" class="titr_inc" required>
-                    <option value="<?php echo $contact['id_categories']; ?>"><?php echo $contact['id_categories']; ?></option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
+                    <option value="<?php echo $contact['id_categories']; ?>">
+                        <?php foreach ($resultc as $valuec) {
+                            if ($contact['id_categories'] == $valuec['id_categories']) {
+                                echo $valuec['nom_categories'];
+                            }
+                        } ?>
+                    </option>
+                    <?php foreach ($resultc as $valuec) {
+                        echo "<option value=". $valuec['id_categories'] .">". $valuec['nom_categories'] ."</option>";
+                    } ?>
                 </select>
 
                 <label for="s_categorie" class="titr_lac">Sous catégorie :</label>
                 <select name="s_categorie" class="titr_inc" required>
-                    <option value="<?php echo $contact['id_sous_categories']; ?>"><?php echo $contact['id_sous_categories']; ?></option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
+                    <option value="<?php echo $contact['id_sous_categories']; ?>">
+                        <?php foreach ($resultsc as $valuesc) {
+                            if ($contact['id_sous_categories'] == $valuesc['id_sous_categories']) {
+                                echo $valuesc['nom_sous_categories'];
+                            }
+                        } ?>
+                    </option>
+                    <?php foreach ($resultsc as $valuesc) {
+                        echo "<option value=". $valuesc['id_sous_categories'] .">". $valuesc['nom_sous_categories'] ."</option>";
+                    } ?>
                 </select>
 
                 <input type="submit" name="submit" id="submit" class="titr_inc" value="Modifications de l'utilisateur">
@@ -91,3 +159,8 @@
     </div>
 </body>
 </html>
+<?php 
+} else {
+    header("Location: index.php");
+}
+?>
