@@ -1,5 +1,30 @@
 <?php
-session_start(); 
+require 'assets/db/auth.php';
+forcer_utilisateur_connecte();
+
+require "assets/db/connectdb.php";
+
+$sqlRequestmarques = ("SELECT * FROM marques");
+$pdoStatmarques = $db -> prepare($sqlRequestmarques);
+$pdoStatmarques->execute();
+$resultmarques = $pdoStatmarques->fetchAll(PDO::FETCH_ASSOC);
+
+$sqlRequestgenres = ("SELECT * FROM genres");
+$pdoStatgenres = $db -> prepare($sqlRequestgenres);
+$pdoStatgenres->execute();
+$resultgenres = $pdoStatgenres->fetchAll(PDO::FETCH_ASSOC);
+
+$sqlRequestc = ("SELECT * FROM categories");
+$pdoStatc = $db -> prepare($sqlRequestc);
+$pdoStatc->execute();
+$resultc = $pdoStatc->fetchAll(PDO::FETCH_ASSOC);
+
+$sqlRequestsc = ("SELECT * FROM sous_categories");
+$pdoStatsc = $db -> prepare($sqlRequestsc);
+$pdoStatsc->execute();
+$resultsc = $pdoStatsc->fetchAll(PDO::FETCH_ASSOC);
+
+if ($_SESSION['role'] == 2) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -35,7 +60,11 @@ session_start();
                 <input type="text" name="nom">
 
                 <label for="marque">Marque :</label>
-                <input type="text" name="marque">
+                <select name="marque">
+                    <?php foreach ($resultmarques as $valuemarques) {
+                        echo "<option value=". $valuemarques['id_marques'] .">". $valuemarques['nom_marques'] ."</option>";
+                    } ?>
+                </select>
 
                 <label for="desc">Description :</label>
                 <input type="text" name="desc">
@@ -43,19 +72,34 @@ session_start();
                 <label for="prix">Prix :</label>
                 <input type="text" name="prix">
 
+                <label for="imgp">Image principale</label>
+                <input type="text" name="imgp">
+
+                <label for="imgs1">Image secondaire 1</label>
+                <input type="text" name="imgs1">
+
+                <label for="imgs2">Image secondaire 2</label>
+                <input type="text" name="imgs2">
+
                 <label for="genre">Genre :</label>
-                <input type="text" name="genre">
+                <select name="genre">
+                    <?php foreach ($resultgenres as $valuegenres) {
+                        echo "<option value=". $valuegenres['id_genres'] .">". $valuegenres['nom_genres'] ."</option>";
+                    } ?>
+                </select>
 
                 <label for="categorie">Catégorie :</label>
                 <select name="categorie">
-                    <option value="1">Homme</option>
-                    <option value="2">Femme</option>
+                    <?php foreach ($resultc as $valuec) {
+                        echo "<option value=". $valuec['id_categories'] .">". $valuec['nom_categories'] ."</option>";
+                    } ?>
                 </select>
 
                 <label for="s_categorie">Sous catégorie :</label>
                 <select name="s_categorie">
-                    <option value="1">Hauts</option>
-                    <option value="2">Pantalons</option>
+                    <?php foreach ($resultsc as $valuesc) {
+                        echo "<option value=". $valuesc['id_sous_categories'] .">". $valuesc['nom_sous_categories'] ."</option>";
+                    } ?>
                 </select>
 
                 <input type="submit" class="sub" value="Ajouter">
@@ -67,3 +111,8 @@ session_start();
     </div>
 </body>
 </html>
+<?php 
+} else {
+    header("Location: index.php");
+}
+?>

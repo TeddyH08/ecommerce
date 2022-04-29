@@ -1,6 +1,11 @@
 <?php
 
-session_start(); 
+require 'assets/db/auth.php';
+forcer_utilisateur_connecte();
+
+require "assets/db/connectdb.php";
+
+if ($_SESSION['role'] == 2) {
 
     require 'assets/db/crud/users/lireu.php';
 ?>
@@ -58,7 +63,7 @@ session_start();
                     <p><?php echo $resultat['tel_utilisateurs'] ?></p>
                     <p><?php echo $resultat['rue_utilisateurs'] ?></p>
                     <p><?php echo $resultat['cp_utilisateurs'] ?></p>
-                    <p><?php echo $resultat['ville_utilisateur'] ?></p>
+                    <p><?php echo $resultat['ville_utilisateurs'] ?></p>
                     <p><?php echo $resultat['pays_utilisateurs'] ?></p>
                     <p><?php echo $resultat['id_roles'] ?></p>
                 </div>
@@ -69,3 +74,8 @@ session_start();
     </div>
 </body>
 </html>
+<?php 
+} else {
+    header("Location: index.php");
+}
+?>

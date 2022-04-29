@@ -16,6 +16,15 @@ require '../../connectdb.php';
         if(isset($_POST["prix"]) && (!empty($_POST["prix"]))){
             $prix = htmlspecialchars($_POST["prix"]);
         }
+        if(isset($_POST["imgp"]) && (!empty($_POST["imgp"]))){
+            $prix = htmlspecialchars($_POST["imgp"]);
+        }
+        if(isset($_POST["imgs1"]) && (!empty($_POST["imgs1"]))){
+            $prix = htmlspecialchars($_POST["imgs1"]);
+        }
+        if(isset($_POST["imgs2"]) && (!empty($_POST["imgs2"]))){
+            $prix = htmlspecialchars($_POST["imgs2"]);
+        }
         if(isset($_POST["genre"]) && (!empty($_POST["genre"]))){
             $genre = htmlspecialchars($_POST["genre"]);
         }

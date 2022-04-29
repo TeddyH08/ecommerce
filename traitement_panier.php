@@ -3,7 +3,7 @@
 
 require_once 'assets/db/connectdb.php';
 
-$id_login = 2;
+$id_login = $_SESSION['id'];
 
 $tailles = $_POST['tailles'];
 $couleurs = $_POST['couleurs'];
